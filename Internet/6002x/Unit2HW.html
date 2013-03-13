@@ -1,0 +1,496 @@
+<!DOCTYPE html>
+<!-- saved from url=(0107)https://6002x.mitx.mit.edu/courseware/6.002_Spring_2012/Week_2/Linearity%2C_Thevenin_and_Norton%3B_Digital/ -->
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"><script type="text/javascript">var NREUMQ=NREUMQ||[];NREUMQ.push(["mark","firstbyte",new Date().getTime()])</script> <title>MITx 6.002x</title> <link rel="stylesheet" href="./Unit2HW_files/jquery.treeview.css" type="text/css" media="all"> <link rel="stylesheet" href="./Unit2HW_files/application.css" type="text/css" media="all"> <script type="text/javascript" src="./Unit2HW_files/jquery-1.6.2.min.js"></script> <script type="text/javascript" src="./Unit2HW_files/jquery-ui-1.8.16.custom.min.js"></script> <script type="text/javascript" src="./Unit2HW_files/swfobject.js"></script> <!--[if lt IE 9]> <script src="/static/js/html5shiv.js"></script> <![endif]--> <script type="text/x-mathjax-config;executed=true">
+    MathJax.Hub.Config({
+      tex2jax: {inlineMath: [["\\(","\\)"]],
+      displayMath: [["\\[","\\]"]]}
+    });
+  </script> <script type="text/javascript" src="./Unit2HW_files/MathJax.js"></script> <style type="text/css">.MathJax_Hover_Frame {border-radius: .25em; -webkit-border-radius: .25em; -moz-border-radius: .25em; -khtml-border-radius: .25em; box-shadow: 0px 0px 15px #83A; -webkit-box-shadow: 0px 0px 15px #83A; -moz-box-shadow: 0px 0px 15px #83A; -khtml-box-shadow: 0px 0px 15px #83A; border: 1px solid #A6D ! important; display: inline-block; position: absolute}
+.MathJax_Hover_Arrow {position: absolute; width: 15px; height: 11px; cursor: pointer}
+</style><style type="text/css">#MathJax_About {position: fixed; left: 50%; width: auto; text-align: center; border: 3px outset; padding: 1em 2em; background-color: #DDDDDD; color: black; cursor: default; font-family: message-box; font-size: 120%; font-style: normal; text-indent: 0; text-transform: none; line-height: normal; letter-spacing: normal; word-spacing: normal; word-wrap: normal; white-space: nowrap; float: none; z-index: 201; border-radius: 15px; -webkit-border-radius: 15px; -moz-border-radius: 15px; -khtml-border-radius: 15px; box-shadow: 0px 10px 20px #808080; -webkit-box-shadow: 0px 10px 20px #808080; -moz-box-shadow: 0px 10px 20px #808080; -khtml-box-shadow: 0px 10px 20px #808080; filter: progid:DXImageTransform.Microsoft.dropshadow(OffX=2, OffY=2, Color='gray', Positive='true')}
+.MathJax_Menu {position: absolute; background-color: white; color: black; width: auto; padding: 5px 0px; border: 1px solid #CCCCCC; margin: 0; cursor: default; font: menu; text-align: left; text-indent: 0; text-transform: none; line-height: normal; letter-spacing: normal; word-spacing: normal; word-wrap: normal; white-space: nowrap; float: none; z-index: 201; border-radius: 5px; -webkit-border-radius: 5px; -moz-border-radius: 5px; -khtml-border-radius: 5px; box-shadow: 0px 10px 20px #808080; -webkit-box-shadow: 0px 10px 20px #808080; -moz-box-shadow: 0px 10px 20px #808080; -khtml-box-shadow: 0px 10px 20px #808080; filter: progid:DXImageTransform.Microsoft.dropshadow(OffX=2, OffY=2, Color='gray', Positive='true')}
+.MathJax_MenuItem {padding: 1px 2em; background: transparent}
+.MathJax_MenuTitle {background-color: #CCCCCC; margin: -5px 0 0 0; text-align: center; font-style: italic; font-size: 80%; color: #444444; padding: 2px 0; overflow: hidden}
+.MathJax_MenuArrow {position: absolute; right: .5em; color: #666666}
+.MathJax_MenuActive .MathJax_MenuArrow {color: white}
+.MathJax_MenuCheck {position: absolute; left: .7em}
+.MathJax_MenuRadioCheck {position: absolute; left: .7em}
+.MathJax_MenuLabel {padding: 1px 2em 3px 1.33em; font-style: italic}
+.MathJax_MenuRule {border-top: 1px solid #DDDDDD; margin: 4px 3px}
+.MathJax_MenuDisabled {color: GrayText}
+.MathJax_MenuActive {background-color: #606872; color: white}
+.MathJax_Menu_Close {position: absolute; width: 31px; height: 31px; top: -15px; left: -15px}
+</style><style type="text/css">#MathJax_Zoom {position: absolute; background-color: #F0F0F0; overflow: auto; display: block; z-index: 301; padding: .5em; border: 1px solid black; margin: 0; font-weight: normal; font-style: normal; text-align: left; text-indent: 0; text-transform: none; line-height: normal; letter-spacing: normal; word-spacing: normal; word-wrap: normal; white-space: nowrap; float: none; box-shadow: 5px 5px 15px #AAAAAA; -webkit-box-shadow: 5px 5px 15px #AAAAAA; -moz-box-shadow: 5px 5px 15px #AAAAAA; -khtml-box-shadow: 5px 5px 15px #AAAAAA; filter: progid:DXImageTransform.Microsoft.dropshadow(OffX=2, OffY=2, Color='gray', Positive='true')}
+#MathJax_ZoomOverlay {position: absolute; left: 0; top: 0; z-index: 300; display: inline-block; width: 100%; height: 100%; border: 0; padding: 0; margin: 0; background-color: white; opacity: 0; filter: alpha(opacity=0)}
+#MathJax_ZoomEventTrap {position: absolute; left: 0; top: 0; z-index: 302; display: inline-block; border: 0; padding: 0; margin: 0; background-color: white; opacity: 0; filter: alpha(opacity=0)}
+</style><style type="text/css">.MathJax_Preview {color: #888}
+#MathJax_Message {position: fixed; left: 1em; bottom: 1.5em; background-color: #E6E6E6; border: 1px solid #959595; margin: 0px; padding: 2px 8px; z-index: 102; color: black; font-size: 80%; width: auto; white-space: nowrap}
+#MathJax_MSIE_Frame {position: absolute; top: 0; left: 0; width: 0px; z-index: 101; border: 0px; margin: 0px; padding: 0px}
+.MathJax_Error {color: #CC0000; font-style: italic}
+</style><style type="text/css">.MathJax_Display {text-align: center; margin: 1em 0em; position: relative; display: block; width: 100%}
+.MathJax .merror {background-color: #FFFF88; color: #CC0000; border: 1px solid #CC0000; padding: 1px 3px; font-style: normal; font-size: 90%}
+#MathJax_Tooltip {background-color: InfoBackground; color: InfoText; border: 1px solid black; box-shadow: 2px 2px 5px #AAAAAA; -webkit-box-shadow: 2px 2px 5px #AAAAAA; -moz-box-shadow: 2px 2px 5px #AAAAAA; -khtml-box-shadow: 2px 2px 5px #AAAAAA; filter: progid:DXImageTransform.Microsoft.dropshadow(OffX=2, OffY=2, Color='gray', Positive='true'); padding: 3px 4px; position: absolute; left: 0; top: 0; width: auto; height: auto; display: none}
+.MathJax {display: inline; font-style: normal; font-weight: normal; line-height: normal; font-size: 100%; font-size-adjust: none; text-indent: 0; text-align: left; text-transform: none; letter-spacing: normal; word-spacing: normal; word-wrap: normal; white-space: nowrap; float: none; direction: ltr; border: 0; padding: 0; margin: 0}
+.MathJax img, .MathJax nobr, .MathJax a {border: 0; padding: 0; margin: 0; max-width: none; max-height: none; vertical-align: 0; line-height: normal; text-decoration: none}
+img.MathJax_strut {border: 0 !important; padding: 0 !important; margin: 0 !important; vertical-align: 0 !important}
+.MathJax span {display: inline; position: static; border: 0; padding: 0; margin: 0; vertical-align: 0; line-height: normal; text-decoration: none}
+.MathJax nobr {white-space: nowrap ! important}
+.MathJax img {display: inline ! important; float: none ! important}
+.MathJax_Processing {visibility: hidden; position: fixed; width: 0; height: 0; overflow: hidden}
+.MathJax_Processed {display: none!important}
+.MathJax_ExBox {display: block; overflow: hidden; width: 1px; height: 60ex}
+.MathJax .MathJax_EmBox {display: block; overflow: hidden; width: 1px; height: 60em}
+.MathJax .MathJax_HitBox {cursor: text; background: white; opacity: 0; filter: alpha(opacity=0)}
+.MathJax .MathJax_HitBox * {filter: none; opacity: 1; background: transparent}
+#MathJax_Tooltip * {filter: none; opacity: 1; background: transparent}
+@font-face {font-family: MathJax_Main; src: url('https://mitxstatic.s3.amazonaws.com/js/mathjax-MathJax-c9db6ac/fonts/HTML-CSS/TeX/woff/MathJax_Main-Regular.woff') format('woff'), url('https://mitxstatic.s3.amazonaws.com/js/mathjax-MathJax-c9db6ac/fonts/HTML-CSS/TeX/otf/MathJax_Main-Regular.otf') format('opentype')}
+@font-face {font-family: MathJax_Main; src: url('https://mitxstatic.s3.amazonaws.com/js/mathjax-MathJax-c9db6ac/fonts/HTML-CSS/TeX/woff/MathJax_Main-Bold.woff') format('woff'), url('https://mitxstatic.s3.amazonaws.com/js/mathjax-MathJax-c9db6ac/fonts/HTML-CSS/TeX/otf/MathJax_Main-Bold.otf') format('opentype'); font-weight: bold}
+@font-face {font-family: MathJax_Main; src: url('https://mitxstatic.s3.amazonaws.com/js/mathjax-MathJax-c9db6ac/fonts/HTML-CSS/TeX/woff/MathJax_Main-Italic.woff') format('woff'), url('https://mitxstatic.s3.amazonaws.com/js/mathjax-MathJax-c9db6ac/fonts/HTML-CSS/TeX/otf/MathJax_Main-Italic.otf') format('opentype'); font-style: italic}
+@font-face {font-family: MathJax_Math; src: url('https://mitxstatic.s3.amazonaws.com/js/mathjax-MathJax-c9db6ac/fonts/HTML-CSS/TeX/woff/MathJax_Math-Italic.woff') format('woff'), url('https://mitxstatic.s3.amazonaws.com/js/mathjax-MathJax-c9db6ac/fonts/HTML-CSS/TeX/otf/MathJax_Math-Italic.otf') format('opentype'); font-style: italic}
+@font-face {font-family: MathJax_Caligraphic; src: url('https://mitxstatic.s3.amazonaws.com/js/mathjax-MathJax-c9db6ac/fonts/HTML-CSS/TeX/woff/MathJax_Caligraphic-Regular.woff') format('woff'), url('https://mitxstatic.s3.amazonaws.com/js/mathjax-MathJax-c9db6ac/fonts/HTML-CSS/TeX/otf/MathJax_Caligraphic-Regular.otf') format('opentype')}
+@font-face {font-family: MathJax_Size1; src: url('https://mitxstatic.s3.amazonaws.com/js/mathjax-MathJax-c9db6ac/fonts/HTML-CSS/TeX/woff/MathJax_Size1-Regular.woff') format('woff'), url('https://mitxstatic.s3.amazonaws.com/js/mathjax-MathJax-c9db6ac/fonts/HTML-CSS/TeX/otf/MathJax_Size1-Regular.otf') format('opentype')}
+@font-face {font-family: MathJax_Size2; src: url('https://mitxstatic.s3.amazonaws.com/js/mathjax-MathJax-c9db6ac/fonts/HTML-CSS/TeX/woff/MathJax_Size2-Regular.woff') format('woff'), url('https://mitxstatic.s3.amazonaws.com/js/mathjax-MathJax-c9db6ac/fonts/HTML-CSS/TeX/otf/MathJax_Size2-Regular.otf') format('opentype')}
+@font-face {font-family: MathJax_Size3; src: url('https://mitxstatic.s3.amazonaws.com/js/mathjax-MathJax-c9db6ac/fonts/HTML-CSS/TeX/woff/MathJax_Size3-Regular.woff') format('woff'), url('https://mitxstatic.s3.amazonaws.com/js/mathjax-MathJax-c9db6ac/fonts/HTML-CSS/TeX/otf/MathJax_Size3-Regular.otf') format('opentype')}
+@font-face {font-family: MathJax_Size4; src: url('https://mitxstatic.s3.amazonaws.com/js/mathjax-MathJax-c9db6ac/fonts/HTML-CSS/TeX/woff/MathJax_Size4-Regular.woff') format('woff'), url('https://mitxstatic.s3.amazonaws.com/js/mathjax-MathJax-c9db6ac/fonts/HTML-CSS/TeX/otf/MathJax_Size4-Regular.otf') format('opentype')}
+.MathJax .noError {vertical-align: ; font-size: 90%; text-align: left; color: black; padding: 1px 3px; border: 1px solid}
+</style></head> <body class=""><div style="visibility: hidden; overflow-x: hidden; overflow-y: hidden; position: absolute; top: 0px; height: 1px; width: auto; padding-top: 0px; padding-right: 0px; padding-bottom: 0px; padding-left: 0px; border-top-width: 0px; border-right-width: 0px; border-bottom-width: 0px; border-left-width: 0px; border-style: initial; border-color: initial; border-image: initial; margin-top: 0px; margin-right: 0px; margin-bottom: 0px; margin-left: 0px; text-align: left; text-indent: 0px; text-transform: none; line-height: normal; letter-spacing: normal; word-spacing: normal; "><div id="MathJax_Hidden"></div></div><div id="MathJax_Message" style="display: none; "></div> <!--[if lte IE 8]> <p class="ie-warning">You are using a browser that is not supported by <em>MITx</em>, and you might not be able to complete pieces of the course. Please download the latest version of <a href="http://www.mozilla.org/en-US/firefox/new/">Firefox</a> or <a href="https://www.google.com/chrome">Chrome</a> to get the full experience.</p> <![endif]--> <div class="header-wrapper"> <header> <hgroup> <h1><em>MITx</em></h1> <h2><a href="https://6002x.mitx.mit.edu/courseware">Circuits and Electronics</a></h2> </hgroup> <nav class="courseware"> <ul class="coursenav"> <li class="courseware"><a href="https://6002x.mitx.mit.edu/courseware">Courseware</a></li> <li class="info"><a href="https://6002x.mitx.mit.edu/info">Course Info</a></li> <li class="book"><a href="https://6002x.mitx.mit.edu/book">Textbook</a></li> <li class="discussion"><a href="https://6002x.mitx.mit.edu/discussion/questions">Discussion</a></li> <li class="wiki"><a href="https://6002x.mitx.mit.edu/wiki/view">Wiki</a></li> <li class="profile"><a href="https://6002x.mitx.mit.edu/profile">Profile</a></li> </ul> </nav> </header> </div> <section class="main-content"> <div class="course-wrapper"> <section class="course-index"> <header id="open_close_accordion"> <h2>Courseware Index</h2> <a href="https://6002x.mitx.mit.edu/courseware/6.002_Spring_2012/Week_2/Linearity%2C_Thevenin_and_Norton%3B_Digital/#">close</a> </header> <div id="accordion" class="ui-accordion ui-widget ui-helper-reset ui-accordion-icons" role="tablist"> <h3 class="ui-accordion-header ui-helper-reset ui-state-default ui-corner-all" role="tab" aria-expanded="false" aria-selected="false" tabindex="-1"><span class="ui-icon ui-icon-triangle-1-e"></span><a href="https://6002x.mitx.mit.edu/courseware/6.002_Spring_2012/Week_2/Linearity%2C_Thevenin_and_Norton%3B_Digital/#">Overview</a></h3> <ul class="ui-accordion-content ui-helper-reset ui-widget-content ui-corner-bottom" role="tabpanel" style="display: none; "> <li> <a href="https://6002x.mitx.mit.edu/courseware/6.002_Spring_2012/Overview/Welcome/"> <p>Welcome</p> <p class="subtitle">
+              Video
+
+            </p> </a> </li><li> <a href="https://6002x.mitx.mit.edu/courseware/6.002_Spring_2012/Overview/System_Usage_Sequence/"> <p>System Usage Sequence</p> <p class="subtitle">
+              Lecture Sequence
+
+            </p> </a> </li><li> <a href="https://6002x.mitx.mit.edu/courseware/6.002_Spring_2012/Overview/Lab0%3A_Using_the_tools/"> <p>Lab0: Using the tools</p> <p class="subtitle">
+              Lab
+
+            </p> </a> </li><li> <a href="https://6002x.mitx.mit.edu/courseware/6.002_Spring_2012/Overview/Circuit_Sandbox/"> <p>Circuit Sandbox</p> <p class="subtitle">
+              Lab
+
+            </p> </a> </li></ul> <h3 class="ui-accordion-header ui-helper-reset ui-state-default ui-corner-all" role="tab" aria-expanded="false" aria-selected="false" tabindex="-1"><span class="ui-icon ui-icon-triangle-1-e"></span><a href="https://6002x.mitx.mit.edu/courseware/6.002_Spring_2012/Week_2/Linearity%2C_Thevenin_and_Norton%3B_Digital/#">Week 1</a></h3> <ul class="ui-accordion-content ui-helper-reset ui-widget-content ui-corner-bottom" role="tabpanel" style="display: none; "> <li> <a href="https://6002x.mitx.mit.edu/courseware/6.002_Spring_2012/Week_1/Administrivia_and_Circuit_Elements/"> <p>Administrivia and Circuit Elements</p> <p class="subtitle">
+              Lecture Sequence
+
+            </p> </a> </li><li> <a href="https://6002x.mitx.mit.edu/courseware/6.002_Spring_2012/Week_1/Circuit_Analysis_Toolchest/"> <p>Circuit Analysis Toolchest</p> <p class="subtitle">
+              Lecture Sequence
+
+            </p> </a> </li><li> <a href="https://6002x.mitx.mit.edu/courseware/6.002_Spring_2012/Week_1/Basic_Circuit_Analysis/"> <p>Basic Circuit Analysis</p> <p class="subtitle">
+              Homework
+
+                due March 18
+            </p> </a> </li><li> <a href="https://6002x.mitx.mit.edu/courseware/6.002_Spring_2012/Week_1/Resistor_Divider/"> <p>Resistor Divider</p> <p class="subtitle">
+              Lab
+
+                due March 18
+            </p> </a> </li><li> <a href="https://6002x.mitx.mit.edu/courseware/6.002_Spring_2012/Week_1/Week_1_Tutorials/"> <p>Week 1 Tutorials</p> <p class="subtitle">
+              Tutorial Index
+
+            </p> </a> </li></ul> <h3 class="ui-accordion-header ui-helper-reset ui-state-default ui-state-active ui-corner-top" role="tab" aria-expanded="true" aria-selected="true" tabindex="0"><span class="ui-icon ui-icon-triangle-1-s"></span><a href="https://6002x.mitx.mit.edu/courseware/6.002_Spring_2012/Week_2/Linearity%2C_Thevenin_and_Norton%3B_Digital/#">Week 2</a></h3> <ul class="ui-accordion-content ui-helper-reset ui-widget-content ui-corner-bottom ui-accordion-content-active" role="tabpanel"> <li> <a href="https://6002x.mitx.mit.edu/courseware/6.002_Spring_2012/Week_2/Linearity_and_Superposition/"> <p>Linearity and Superposition</p> <p class="subtitle">
+              Lecture Sequence
+
+            </p> </a> </li><li> <a href="https://6002x.mitx.mit.edu/courseware/6.002_Spring_2012/Week_2/Static_Discipline_and_Boolean_Logic/"> <p>Static Discipline and Boolean Logic</p> <p class="subtitle">
+              Lecture Sequence
+
+            </p> </a> </li><li class="active"> <a href="./Unit2HW_files/Unit2HW.html"> <p>Linearity, Thevenin and Norton; Digital</p> <p class="subtitle">
+              Homework
+
+                due March 25
+            </p> </a> </li><li> <a href="https://6002x.mitx.mit.edu/courseware/6.002_Spring_2012/Week_2/Superposition_experiment/"> <p>Superposition experiment</p> <p class="subtitle">
+              Lab
+
+                due March 25
+            </p> </a> </li><li> <a href="https://6002x.mitx.mit.edu/courseware/6.002_Spring_2012/Week_2/Lab2b%3A_Mixing_Two_Signals/"> <p>Lab2b: Mixing Two Signals</p> <p class="subtitle">
+              Lab
+
+                due March 25
+            </p> </a> </li><li> <a href="https://6002x.mitx.mit.edu/courseware/6.002_Spring_2012/Week_2/Week_2_Tutorials/"> <p>Week 2 Tutorials</p> <p class="subtitle">
+              Tutorial Index
+
+            </p> </a> </li></ul> <h3 class="ui-accordion-header ui-helper-reset ui-state-default ui-corner-all" role="tab" aria-expanded="false" aria-selected="false" tabindex="-1"><span class="ui-icon ui-icon-triangle-1-e"></span><a href="https://6002x.mitx.mit.edu/courseware/6.002_Spring_2012/Week_2/Linearity%2C_Thevenin_and_Norton%3B_Digital/#">Week 3</a></h3> <ul class="ui-accordion-content ui-helper-reset ui-widget-content ui-corner-bottom" role="tabpanel" style="display: none; "> <li> <a href="https://6002x.mitx.mit.edu/courseware/6.002_Spring_2012/Week_3/Inside_the_Gate/"> <p>Inside the Gate</p> <p class="subtitle">
+              Lecture Sequence
+
+            </p> </a> </li><li> <a href="https://6002x.mitx.mit.edu/courseware/6.002_Spring_2012/Week_3/Circuits_with_Nonlinear_Elements/"> <p>Circuits with Nonlinear Elements</p> <p class="subtitle">
+              Lecture Sequence
+
+            </p> </a> </li><li> <a href="https://6002x.mitx.mit.edu/courseware/6.002_Spring_2012/Week_3/Digital_and_Nonlinear/"> <p>Digital and Nonlinear</p> <p class="subtitle">
+              Homework
+
+                due April 1
+            </p> </a> </li><li> <a href="https://6002x.mitx.mit.edu/courseware/6.002_Spring_2012/Week_3/Logic_Gate_Implementation/"> <p>Logic Gate Implementation</p> <p class="subtitle">
+              Lab
+
+                due April 1
+            </p> </a> </li><li> <a href="https://6002x.mitx.mit.edu/courseware/6.002_Spring_2012/Week_3/Week_3_Tutorials/"> <p>Week 3 Tutorials</p> <p class="subtitle">
+              Tutorial Index
+
+            </p> </a> </li></ul> <h3 class="ui-accordion-header ui-helper-reset ui-state-default ui-corner-all" role="tab" aria-expanded="false" aria-selected="false" tabindex="-1"><span class="ui-icon ui-icon-triangle-1-e"></span><a href="https://6002x.mitx.mit.edu/courseware/6.002_Spring_2012/Week_2/Linearity%2C_Thevenin_and_Norton%3B_Digital/#">Week 4</a></h3> <ul class="ui-accordion-content ui-helper-reset ui-widget-content ui-corner-bottom" role="tabpanel" style="display: none; "> <li> <a href="https://6002x.mitx.mit.edu/courseware/6.002_Spring_2012/Week_4/Incremental_Analysis/"> <p>Incremental Analysis</p> <p class="subtitle">
+              Lecture Sequence
+
+            </p> </a> </li><li> <a href="https://6002x.mitx.mit.edu/courseware/6.002_Spring_2012/Week_4/Dependent_Sources_and_Amplifiers/"> <p>Dependent Sources and Amplifiers</p> <p class="subtitle">
+              Lecture Sequence
+
+            </p> </a> </li><li> <a href="https://6002x.mitx.mit.edu/courseware/6.002_Spring_2012/Week_4/Incremental_and_Amplifiers/"> <p>Incremental and Amplifiers</p> <p class="subtitle">
+              Homework
+
+                due April 8
+            </p> </a> </li><li> <a href="https://6002x.mitx.mit.edu/courseware/6.002_Spring_2012/Week_4/Curve_Tracer/"> <p>Curve Tracer</p> <p class="subtitle">
+              Lab
+
+                due April 8
+            </p> </a> </li><li> <a href="https://6002x.mitx.mit.edu/courseware/6.002_Spring_2012/Week_4/Week_4_Tutorials/"> <p>Week 4 Tutorials</p> <p class="subtitle">
+              Tutorial Index
+
+            </p> </a> </li></ul> </div> </section> <section class="course-content"> <ol class="vert-mod"> <li id="vert-0"> <section id="main_filenameHW2L3h1" class="problems-wrapper"><h2>H2P1: Voltage-Divider Design</h2> <section class="problem"> <div> <span>
+The resistances of commercially-available discrete resistors are
+restricted to particular sets.  For example, the available values of
+resistors with 10% tolerance are selections from the E12 set
+multiplied by a power of ten from 10^0 through 10^5.  The E12 set is
+<br>
+E12={10, 12, 15, 18, 22, 27, 33, 39, 47, 56, 68, 82}
+<br>
+Thus, you can buy 10% resistors with a nominal resistance of
+330<span class="MathJax_Preview"></span><span class="MathJax" id="MathJax-Element-5-Frame" role="textbox" aria-readonly="true" style=""><nobr><span class="math" id="MathJax-Span-27"><span style="display: inline-block; position: relative; height: 0px; font-size: 127%; width: 0.731em; "><span style="position: absolute; clip: rect(1.927em 1000em 2.969em -0.462em); top: -2.8em; left: 0em; "><span class="mrow" id="MathJax-Span-28"><span class="mi" id="MathJax-Span-29" style="font-family: MathJax_Main; ">Ω</span></span><span style="display: inline-block; width: 0px; height: 2.8em; "></span></span></span><span style="border-left-width: 0em; border-left-style: solid; border-left-color: initial; display: inline-block; overflow-x: hidden; overflow-y: hidden; width: 0px; height: 1.037em; vertical-align: -0.071em; "></span></span></nobr></span><script type="math/tex" id="MathJax-Element-5">\Omega</script> or 33k<span class="MathJax_Preview"></span><span class="MathJax" id="MathJax-Element-6-Frame" role="textbox" aria-readonly="true" style=""><nobr><span class="math" id="MathJax-Span-30"><span style="display: inline-block; position: relative; height: 0px; font-size: 127%; width: 0.731em; "><span style="position: absolute; clip: rect(1.927em 1000em 2.969em -0.462em); top: -2.8em; left: 0em; "><span class="mrow" id="MathJax-Span-31"><span class="mi" id="MathJax-Span-32" style="font-family: MathJax_Main; ">Ω</span></span><span style="display: inline-block; width: 0px; height: 2.8em; "></span></span></span><span style="border-left-width: 0em; border-left-style: solid; border-left-color: initial; display: inline-block; overflow-x: hidden; overflow-y: hidden; width: 0px; height: 1.037em; vertical-align: -0.071em; "></span></span></nobr></span><script type="math/tex" id="MathJax-Element-6">\Omega</script>, but not 350<span class="MathJax_Preview"></span><span class="MathJax" id="MathJax-Element-7-Frame" role="textbox" aria-readonly="true" style=""><nobr><span class="math" id="MathJax-Span-33"><span style="display: inline-block; position: relative; height: 0px; font-size: 127%; width: 0.731em; "><span style="position: absolute; clip: rect(1.927em 1000em 2.969em -0.462em); top: -2.8em; left: 0em; "><span class="mrow" id="MathJax-Span-34"><span class="mi" id="MathJax-Span-35" style="font-family: MathJax_Main; ">Ω</span></span><span style="display: inline-block; width: 0px; height: 2.8em; "></span></span></span><span style="border-left-width: 0em; border-left-style: solid; border-left-color: initial; display: inline-block; overflow-x: hidden; overflow-y: hidden; width: 0px; height: 1.037em; vertical-align: -0.071em; "></span></span></nobr></span><script type="math/tex" id="MathJax-Element-7">\Omega</script>.  
+<br>
+The "tolerance" means that if you buy a 10% 390<span class="MathJax_Preview"></span><span class="MathJax" id="MathJax-Element-8-Frame" role="textbox" aria-readonly="true" style=""><nobr><span class="math" id="MathJax-Span-36"><span style="display: inline-block; position: relative; height: 0px; font-size: 127%; width: 0.731em; "><span style="position: absolute; clip: rect(1.927em 1000em 2.969em -0.462em); top: -2.8em; left: 0em; "><span class="mrow" id="MathJax-Span-37"><span class="mi" id="MathJax-Span-38" style="font-family: MathJax_Main; ">Ω</span></span><span style="display: inline-block; width: 0px; height: 2.8em; "></span></span></span><span style="border-left-width: 0em; border-left-style: solid; border-left-color: initial; display: inline-block; overflow-x: hidden; overflow-y: hidden; width: 0px; height: 1.037em; vertical-align: -0.071em; "></span></span></nobr></span><script type="math/tex" id="MathJax-Element-8">\Omega</script> resistor
+you can be sure that its resistance is between 351<span class="MathJax_Preview"></span><span class="MathJax" id="MathJax-Element-9-Frame" role="textbox" aria-readonly="true" style=""><nobr><span class="math" id="MathJax-Span-39"><span style="display: inline-block; position: relative; height: 0px; font-size: 127%; width: 0.731em; "><span style="position: absolute; clip: rect(1.927em 1000em 2.969em -0.462em); top: -2.8em; left: 0em; "><span class="mrow" id="MathJax-Span-40"><span class="mi" id="MathJax-Span-41" style="font-family: MathJax_Main; ">Ω</span></span><span style="display: inline-block; width: 0px; height: 2.8em; "></span></span></span><span style="border-left-width: 0em; border-left-style: solid; border-left-color: initial; display: inline-block; overflow-x: hidden; overflow-y: hidden; width: 0px; height: 1.037em; vertical-align: -0.071em; "></span></span></nobr></span><script type="math/tex" id="MathJax-Element-9">\Omega</script> and
+429<span class="MathJax_Preview"></span><span class="MathJax" id="MathJax-Element-10-Frame" role="textbox" aria-readonly="true" style=""><nobr><span class="math" id="MathJax-Span-42"><span style="display: inline-block; position: relative; height: 0px; font-size: 127%; width: 0.731em; "><span style="position: absolute; clip: rect(1.927em 1000em 2.969em -0.462em); top: -2.8em; left: 0em; "><span class="mrow" id="MathJax-Span-43"><span class="mi" id="MathJax-Span-44" style="font-family: MathJax_Main; ">Ω</span></span><span style="display: inline-block; width: 0px; height: 2.8em; "></span></span></span><span style="border-left-width: 0em; border-left-style: solid; border-left-color: initial; display: inline-block; overflow-x: hidden; overflow-y: hidden; width: 0px; height: 1.037em; vertical-align: -0.071em; "></span></span></nobr></span><script type="math/tex" id="MathJax-Element-10">\Omega</script>.
+<br>
+In this problem we need to choose 10% resistors to make a voltage
+divider that meets a given specification.
+<br> <center> <img src="./Unit2HW_files/voltage-divider.gif"> </center> <br>
+We are given an input voltage <span class="MathJax_Preview"></span><span class="MathJax" id="MathJax-Element-11-Frame" role="textbox" aria-readonly="true" style=""><nobr><span class="math" id="MathJax-Span-45"><span style="display: inline-block; position: relative; height: 0px; font-size: 127%; width: 4.387em; "><span style="position: absolute; clip: rect(1.948em 1000em 3.126em -0.454em); top: -2.8em; left: 0em; "><span class="mrow" id="MathJax-Span-46"><span class="msubsup" id="MathJax-Span-47"><span style="display: inline-block; position: relative; height: 0px; width: 1.183em; "><span style="position: absolute; clip: rect(1.723em 1000em 2.766em -0.454em); top: -2.575em; left: 0em; "><span class="mi" id="MathJax-Span-48" style="font-family: MathJax_Math; font-style: italic; ">V<span style="display: inline-block; overflow-x: hidden; overflow-y: hidden; height: 1px; width: 0.186em; "></span></span><span style="display: inline-block; width: 0px; height: 2.575em; "></span></span><span style="position: absolute; top: -2.312em; left: 0.545em; "><span class="texatom" id="MathJax-Span-49"><span class="mrow" id="MathJax-Span-50"><span class="mi" id="MathJax-Span-51" style="font-size: 70.7%; font-family: MathJax_Math; font-style: italic; ">i</span><span class="mi" id="MathJax-Span-52" style="font-size: 70.7%; font-family: MathJax_Math; font-style: italic; ">n</span></span></span><span style="display: inline-block; width: 0px; height: 2.462em; "></span></span></span></span><span class="mo" id="MathJax-Span-53" style="font-family: MathJax_Main; padding-left: 0.278em; ">=</span><span class="mn" id="MathJax-Span-54" style="font-family: MathJax_Main; padding-left: 0.278em; ">20.0</span></span><span style="display: inline-block; width: 0px; height: 2.8em; "></span></span></span><span style="border-left-width: 0em; border-left-style: solid; border-left-color: initial; display: inline-block; overflow-x: hidden; overflow-y: hidden; width: 0px; height: 1.211em; vertical-align: -0.272em; "></span></span></nobr></span><script type="math/tex" id="MathJax-Element-11">V_{in}=20.0</script>V, and we need to provide
+an open-circuit output voltage of <span class="MathJax_Preview"></span><span class="MathJax" id="MathJax-Element-12-Frame" role="textbox" aria-readonly="true" style=""><nobr><span class="math" id="MathJax-Span-55"><span style="display: inline-block; position: relative; height: 0px; font-size: 127%; width: 4.274em; "><span style="position: absolute; clip: rect(1.948em 1000em 3.126em -0.454em); top: -2.8em; left: 0em; "><span class="mrow" id="MathJax-Span-56"><span class="msubsup" id="MathJax-Span-57"><span style="display: inline-block; position: relative; height: 0px; width: 1.633em; "><span style="position: absolute; clip: rect(1.723em 1000em 2.766em -0.454em); top: -2.575em; left: 0em; "><span class="mi" id="MathJax-Span-58" style="font-family: MathJax_Math; font-style: italic; ">V<span style="display: inline-block; overflow-x: hidden; overflow-y: hidden; height: 1px; width: 0.186em; "></span></span><span style="display: inline-block; width: 0px; height: 2.575em; "></span></span><span style="position: absolute; top: -2.312em; left: 0.545em; "><span class="texatom" id="MathJax-Span-59"><span class="mrow" id="MathJax-Span-60"><span class="mi" id="MathJax-Span-61" style="font-size: 70.7%; font-family: MathJax_Math; font-style: italic; ">o</span><span class="mi" id="MathJax-Span-62" style="font-size: 70.7%; font-family: MathJax_Math; font-style: italic; ">u</span><span class="mi" id="MathJax-Span-63" style="font-size: 70.7%; font-family: MathJax_Math; font-style: italic; ">t</span></span></span><span style="display: inline-block; width: 0px; height: 2.462em; "></span></span></span></span><span class="mo" id="MathJax-Span-64" style="font-family: MathJax_Main; padding-left: 0.278em; ">≈</span><span class="mn" id="MathJax-Span-65" style="font-family: MathJax_Main; padding-left: 0.278em; ">8.0</span></span><span style="display: inline-block; width: 0px; height: 2.8em; "></span></span></span><span style="border-left-width: 0em; border-left-style: solid; border-left-color: initial; display: inline-block; overflow-x: hidden; overflow-y: hidden; width: 0px; height: 1.211em; vertical-align: -0.272em; "></span></span></nobr></span><script type="math/tex" id="MathJax-Element-12">V_{out}\approx 8.0</script>V.  An
+additional requirement is that the Thevenin resistance as seen from
+the output terminals is between <span class="MathJax_Preview"></span><span class="MathJax" id="MathJax-Element-13-Frame" role="textbox" aria-readonly="true" style=""><nobr><span class="math" id="MathJax-Span-66"><span style="display: inline-block; position: relative; height: 0px; font-size: 127%; width: 2.362em; "><span style="position: absolute; clip: rect(1.927em 1000em 2.991em -0.423em); top: -2.8em; left: 0em; "><span class="mrow" id="MathJax-Span-67"><span class="mn" id="MathJax-Span-68" style="font-family: MathJax_Main; ">10</span><span class="mi" id="MathJax-Span-69" style="font-family: MathJax_Math; font-style: italic; ">k</span><span class="mi" id="MathJax-Span-70" style="font-family: MathJax_Main; ">Ω</span></span><span style="display: inline-block; width: 0px; height: 2.8em; "></span></span></span><span style="border-left-width: 0em; border-left-style: solid; border-left-color: initial; display: inline-block; overflow-x: hidden; overflow-y: hidden; width: 0px; height: 1.065em; vertical-align: -0.099em; "></span></span></nobr></span><script type="math/tex" id="MathJax-Element-13">10k\Omega</script> and <span class="MathJax_Preview"></span><span class="MathJax" id="MathJax-Element-14-Frame" role="textbox" aria-readonly="true" style=""><nobr><span class="math" id="MathJax-Span-71"><span style="display: inline-block; position: relative; height: 0px; font-size: 127%; width: 2.362em; "><span style="position: absolute; clip: rect(1.927em 1000em 2.991em -0.464em); top: -2.8em; left: 0em; "><span class="mrow" id="MathJax-Span-72"><span class="mn" id="MathJax-Span-73" style="font-family: MathJax_Main; ">30</span><span class="mi" id="MathJax-Span-74" style="font-family: MathJax_Math; font-style: italic; ">k</span><span class="mi" id="MathJax-Span-75" style="font-family: MathJax_Main; ">Ω</span></span><span style="display: inline-block; width: 0px; height: 2.8em; "></span></span></span><span style="border-left-width: 0em; border-left-style: solid; border-left-color: initial; display: inline-block; overflow-x: hidden; overflow-y: hidden; width: 0px; height: 1.065em; vertical-align: -0.099em; "></span></span></nobr></span><script type="math/tex" id="MathJax-Element-14">30k\Omega</script>.
+Assume first that the resistors have their nominal resistance.  Come
+up with resistors <span class="MathJax_Preview"></span><span class="MathJax" id="MathJax-Element-15-Frame" role="textbox" aria-readonly="true" style=""><nobr><span class="math" id="MathJax-Span-76"><span style="display: inline-block; position: relative; height: 0px; font-size: 127%; width: 1.144em; "><span style="position: absolute; clip: rect(3.148em 1000em 4.319em -0.473em); top: -4em; left: 0em; "><span class="mrow" id="MathJax-Span-77"><span class="msubsup" id="MathJax-Span-78"><span style="display: inline-block; position: relative; height: 0px; width: 1.144em; "><span style="position: absolute; clip: rect(1.723em 1000em 2.765em -0.473em); top: -2.575em; left: 0em; "><span class="mi" id="MathJax-Span-79" style="font-family: MathJax_Math; font-style: italic; ">R</span><span style="display: inline-block; width: 0px; height: 2.575em; "></span></span><span style="position: absolute; top: -2.312em; left: 0.731em; "><span class="mn" id="MathJax-Span-80" style="font-size: 70.7%; font-family: MathJax_Main; ">1</span><span style="display: inline-block; width: 0px; height: 2.462em; "></span></span></span></span></span><span style="display: inline-block; width: 0px; height: 4em; "></span></span></span><span style="border-left-width: 0em; border-left-style: solid; border-left-color: initial; display: inline-block; overflow-x: hidden; overflow-y: hidden; width: 0px; height: 1.201em; vertical-align: -0.262em; "></span></span></nobr></span><script type="math/tex" id="MathJax-Element-15">R_1</script> and <span class="MathJax_Preview"></span><span class="MathJax" id="MathJax-Element-16-Frame" role="textbox" aria-readonly="true" style=""><nobr><span class="math" id="MathJax-Span-81"><span style="display: inline-block; position: relative; height: 0px; font-size: 127%; width: 1.144em; "><span style="position: absolute; clip: rect(3.148em 1000em 4.319em -0.473em); top: -4em; left: 0em; "><span class="mrow" id="MathJax-Span-82"><span class="msubsup" id="MathJax-Span-83"><span style="display: inline-block; position: relative; height: 0px; width: 1.144em; "><span style="position: absolute; clip: rect(1.723em 1000em 2.765em -0.473em); top: -2.575em; left: 0em; "><span class="mi" id="MathJax-Span-84" style="font-family: MathJax_Math; font-style: italic; ">R</span><span style="display: inline-block; width: 0px; height: 2.575em; "></span></span><span style="position: absolute; top: -2.312em; left: 0.731em; "><span class="mn" id="MathJax-Span-85" style="font-size: 70.7%; font-family: MathJax_Main; ">2</span><span style="display: inline-block; width: 0px; height: 2.462em; "></span></span></span></span></span><span style="display: inline-block; width: 0px; height: 4em; "></span></span></span><span style="border-left-width: 0em; border-left-style: solid; border-left-color: initial; display: inline-block; overflow-x: hidden; overflow-y: hidden; width: 0px; height: 1.201em; vertical-align: -0.262em; "></span></span></nobr></span><script type="math/tex" id="MathJax-Element-16">R_2</script> such that the division ratio
+<span class="MathJax_Preview"></span><span class="MathJax" id="MathJax-Element-17-Frame" role="textbox" aria-readonly="true" style=""><nobr><span class="math" id="MathJax-Span-86"><span style="display: inline-block; position: relative; height: 0px; font-size: 127%; width: 3.262em; "><span style="position: absolute; clip: rect(1.881em 1000em 3.219em -0.454em); top: -2.8em; left: 0em; "><span class="mrow" id="MathJax-Span-87"><span class="msubsup" id="MathJax-Span-88"><span style="display: inline-block; position: relative; height: 0px; width: 1.633em; "><span style="position: absolute; clip: rect(1.723em 1000em 2.766em -0.454em); top: -2.575em; left: 0em; "><span class="mi" id="MathJax-Span-89" style="font-family: MathJax_Math; font-style: italic; ">V<span style="display: inline-block; overflow-x: hidden; overflow-y: hidden; height: 1px; width: 0.186em; "></span></span><span style="display: inline-block; width: 0px; height: 2.575em; "></span></span><span style="position: absolute; top: -2.312em; left: 0.545em; "><span class="texatom" id="MathJax-Span-90"><span class="mrow" id="MathJax-Span-91"><span class="mi" id="MathJax-Span-92" style="font-size: 70.7%; font-family: MathJax_Math; font-style: italic; ">o</span><span class="mi" id="MathJax-Span-93" style="font-size: 70.7%; font-family: MathJax_Math; font-style: italic; ">u</span><span class="mi" id="MathJax-Span-94" style="font-size: 70.7%; font-family: MathJax_Math; font-style: italic; ">t</span></span></span><span style="display: inline-block; width: 0px; height: 2.462em; "></span></span></span></span><span class="texatom" id="MathJax-Span-95"><span class="mrow" id="MathJax-Span-96"><span class="mo" id="MathJax-Span-97" style="font-family: MathJax_Main; ">/</span></span></span><span class="msubsup" id="MathJax-Span-98"><span style="display: inline-block; position: relative; height: 0px; width: 1.183em; "><span style="position: absolute; clip: rect(1.723em 1000em 2.766em -0.454em); top: -2.575em; left: 0em; "><span class="mi" id="MathJax-Span-99" style="font-family: MathJax_Math; font-style: italic; ">V<span style="display: inline-block; overflow-x: hidden; overflow-y: hidden; height: 1px; width: 0.186em; "></span></span><span style="display: inline-block; width: 0px; height: 2.575em; "></span></span><span style="position: absolute; top: -2.312em; left: 0.545em; "><span class="texatom" id="MathJax-Span-100"><span class="mrow" id="MathJax-Span-101"><span class="mi" id="MathJax-Span-102" style="font-size: 70.7%; font-family: MathJax_Math; font-style: italic; ">i</span><span class="mi" id="MathJax-Span-103" style="font-size: 70.7%; font-family: MathJax_Math; font-style: italic; ">n</span></span></span><span style="display: inline-block; width: 0px; height: 2.462em; "></span></span></span></span></span><span style="display: inline-block; width: 0px; height: 2.8em; "></span></span></span><span style="border-left-width: 0em; border-left-style: solid; border-left-color: initial; display: inline-block; overflow-x: hidden; overflow-y: hidden; width: 0px; height: 1.413em; vertical-align: -0.389em; "></span></span></nobr></span><script type="math/tex" id="MathJax-Element-17">V_{out}/V_{in}</script> is within 10% of the requirement.
+<br>
+Of course, the resistances you chose are just nominal.  Given that
+they are only guaranteed to have resistances within 10% of the nominal
+value, what is the largest and smallest value that <span class="MathJax_Preview"></span><span class="MathJax" id="MathJax-Element-18-Frame" role="textbox" aria-readonly="true" style=""><nobr><span class="math" id="MathJax-Span-104"><span style="display: inline-block; position: relative; height: 0px; font-size: 127%; width: 1.633em; "><span style="position: absolute; clip: rect(3.148em 1000em 4.327em -0.454em); top: -4em; left: 0em; "><span class="mrow" id="MathJax-Span-105"><span class="msubsup" id="MathJax-Span-106"><span style="display: inline-block; position: relative; height: 0px; width: 1.633em; "><span style="position: absolute; clip: rect(1.723em 1000em 2.766em -0.454em); top: -2.575em; left: 0em; "><span class="mi" id="MathJax-Span-107" style="font-family: MathJax_Math; font-style: italic; ">V<span style="display: inline-block; overflow-x: hidden; overflow-y: hidden; height: 1px; width: 0.186em; "></span></span><span style="display: inline-block; width: 0px; height: 2.575em; "></span></span><span style="position: absolute; top: -2.312em; left: 0.545em; "><span class="texatom" id="MathJax-Span-108"><span class="mrow" id="MathJax-Span-109"><span class="mi" id="MathJax-Span-110" style="font-size: 70.7%; font-family: MathJax_Math; font-style: italic; ">o</span><span class="mi" id="MathJax-Span-111" style="font-size: 70.7%; font-family: MathJax_Math; font-style: italic; ">u</span><span class="mi" id="MathJax-Span-112" style="font-size: 70.7%; font-family: MathJax_Math; font-style: italic; ">t</span></span></span><span style="display: inline-block; width: 0px; height: 2.462em; "></span></span></span></span></span><span style="display: inline-block; width: 0px; height: 4em; "></span></span></span><span style="border-left-width: 0em; border-left-style: solid; border-left-color: initial; display: inline-block; overflow-x: hidden; overflow-y: hidden; width: 0px; height: 1.211em; vertical-align: -0.272em; "></span></span></nobr></span><script type="math/tex" id="MathJax-Element-18">V_{out}</script> may have?
+<br>
+Enter your values here.
+</span> <span id="" state=""> <span> <br>
+    R1 (in Ohms): <input type="text" name="input_filenameHW2L3h1_2_1" id="input_filenameHW2L3h1_2_1" value=""> <span id="answer_filenameHW2L3h1_2_1"></span> <span class="unanswered" style="display:inline-block;" id="status_filenameHW2L3h1_2_1"></span> <br>
+    R2 (in Ohms): <input type="text" name="input_filenameHW2L3h1_2_2" id="input_filenameHW2L3h1_2_2" value=""> <span id="answer_filenameHW2L3h1_2_2"></span> <span class="unanswered" style="display:inline-block;" id="status_filenameHW2L3h1_2_2"></span> <br> <br>
+    Vmax (in Volts): <input type="text" name="input_filenameHW2L3h1_2_3" id="input_filenameHW2L3h1_2_3" value=""> <span id="answer_filenameHW2L3h1_2_3"></span> <span class="unanswered" style="display:inline-block;" id="status_filenameHW2L3h1_2_3"></span> <br>
+    Vmin (in Volts): <input type="text" name="input_filenameHW2L3h1_2_4" id="input_filenameHW2L3h1_2_4" value=""> <span id="answer_filenameHW2L3h1_2_4"></span> <span class="unanswered" style="display:inline-block;" id="status_filenameHW2L3h1_2_4"></span> </span> </span> </div> <section class="action"> <input type="hidden" name="problem_id" value="H2P1: Voltage-Divider Design"> <input id="check_filenameHW2L3h1" type="button" value="Check "> </section> </section>
+</section> </li> <li id="vert-1"> <section id="main_filenameHW2L3h2" class="problems-wrapper"><h2>H2P2: Solar Power</h2> <section class="problem"> <div> <span> 
+
+A simple model of a photovoltaic solar cell is a current source, with
+the current proportional to the amount of sunlight falling on it.  A
+more accurate model includes a diode (a nonlinear element we will see
+later).  There is some leakage current that we can model with a
+parallel resistor, and there is a voltage drop in the interconnect
+that we can model with series resistances connecting to the load
+resistor.  So a crude model of a complete system might be the circuit
+shown below.
+<center> <img src="./Unit2HW_files/solar-cell.gif"> </center> <br>
+In this system we have <span class="MathJax_Preview"></span><span class="MathJax" id="MathJax-Element-1-Frame" role="textbox" aria-readonly="true" style=""><nobr><span class="math" id="MathJax-Span-1"><span style="display: inline-block; position: relative; height: 0px; font-size: 127%; width: 3.15em; "><span style="position: absolute; clip: rect(1.948em 1000em 2.991em -0.48em); top: -2.8em; left: 0em; "><span class="mrow" id="MathJax-Span-2"><span class="mi" id="MathJax-Span-3" style="font-family: MathJax_Math; font-style: italic; ">I<span style="display: inline-block; overflow-x: hidden; overflow-y: hidden; height: 1px; width: 0.064em; "></span></span><span class="mo" id="MathJax-Span-4" style="font-family: MathJax_Main; padding-left: 0.278em; ">=</span><span class="mn" id="MathJax-Span-5" style="font-family: MathJax_Main; padding-left: 0.278em; ">0.6</span></span><span style="display: inline-block; width: 0px; height: 2.8em; "></span></span></span><span style="border-left-width: 0em; border-left-style: solid; border-left-color: initial; display: inline-block; overflow-x: hidden; overflow-y: hidden; width: 0px; height: 1.038em; vertical-align: -0.099em; "></span></span></nobr></span><script type="math/tex" id="MathJax-Element-1">I=0.6</script>A, <span class="MathJax_Preview"></span><span class="MathJax" id="MathJax-Element-2-Frame" role="textbox" aria-readonly="true" style=""><nobr><span class="math" id="MathJax-Span-6"><span style="display: inline-block; position: relative; height: 0px; font-size: 127%; width: 4.499em; "><span style="position: absolute; clip: rect(1.927em 1000em 3.256em -0.473em); top: -2.8em; left: 0em; "><span class="mrow" id="MathJax-Span-7"><span class="msubsup" id="MathJax-Span-8"><span style="display: inline-block; position: relative; height: 0px; width: 1.144em; "><span style="position: absolute; clip: rect(1.723em 1000em 2.765em -0.473em); top: -2.575em; left: 0em; "><span class="mi" id="MathJax-Span-9" style="font-family: MathJax_Math; font-style: italic; ">R</span><span style="display: inline-block; width: 0px; height: 2.575em; "></span></span><span style="position: absolute; top: -2.312em; left: 0.731em; "><span class="mi" id="MathJax-Span-10" style="font-size: 70.7%; font-family: MathJax_Math; font-style: italic; ">p</span><span style="display: inline-block; width: 0px; height: 2.462em; "></span></span></span></span><span class="mo" id="MathJax-Span-11" style="font-family: MathJax_Main; padding-left: 0.278em; ">=</span><span class="mn" id="MathJax-Span-12" style="font-family: MathJax_Main; padding-left: 0.278em; ">1.0</span><span class="mi" id="MathJax-Span-13" style="font-family: MathJax_Main; ">Ω</span></span><span style="display: inline-block; width: 0px; height: 2.8em; "></span></span></span><span style="border-left-width: 0em; border-left-style: solid; border-left-color: initial; display: inline-block; overflow-x: hidden; overflow-y: hidden; width: 0px; height: 1.402em; vertical-align: -0.436em; "></span></span></nobr></span><script type="math/tex" id="MathJax-Element-2">R_p=1.0\Omega</script>, and <span class="MathJax_Preview"></span><span class="MathJax" id="MathJax-Element-3-Frame" role="textbox" aria-readonly="true" style=""><nobr><span class="math" id="MathJax-Span-14"><span style="display: inline-block; position: relative; height: 0px; font-size: 127%; width: 4.499em; "><span style="position: absolute; clip: rect(1.927em 1000em 3.126em -0.473em); top: -2.8em; left: 0em; "><span class="mrow" id="MathJax-Span-15"><span class="msubsup" id="MathJax-Span-16"><span style="display: inline-block; position: relative; height: 0px; width: 1.144em; "><span style="position: absolute; clip: rect(1.723em 1000em 2.765em -0.473em); top: -2.575em; left: 0em; "><span class="mi" id="MathJax-Span-17" style="font-family: MathJax_Math; font-style: italic; ">R</span><span style="display: inline-block; width: 0px; height: 2.575em; "></span></span><span style="position: absolute; top: -2.312em; left: 0.731em; "><span class="mi" id="MathJax-Span-18" style="font-size: 70.7%; font-family: MathJax_Math; font-style: italic; ">s</span><span style="display: inline-block; width: 0px; height: 2.462em; "></span></span></span></span><span class="mo" id="MathJax-Span-19" style="font-family: MathJax_Main; padding-left: 0.278em; ">=</span><span class="mn" id="MathJax-Span-20" style="font-family: MathJax_Main; padding-left: 0.278em; ">1.5</span><span class="mi" id="MathJax-Span-21" style="font-family: MathJax_Main; ">Ω</span></span><span style="display: inline-block; width: 0px; height: 2.8em; "></span></span></span><span style="border-left-width: 0em; border-left-style: solid; border-left-color: initial; display: inline-block; overflow-x: hidden; overflow-y: hidden; width: 0px; height: 1.236em; vertical-align: -0.271em; "></span></span></nobr></span><script type="math/tex" id="MathJax-Element-3">R_s=1.5\Omega</script>.
+<br>
+You are to determine the load resistance, <span class="MathJax_Preview"></span><span class="MathJax" id="MathJax-Element-4-Frame" role="textbox" aria-readonly="true" style=""><nobr><span class="math" id="MathJax-Span-22"><span style="display: inline-block; position: relative; height: 0px; font-size: 127%; width: 1.256em; "><span style="position: absolute; clip: rect(3.148em 1000em 4.319em -0.473em); top: -4em; left: 0em; "><span class="mrow" id="MathJax-Span-23"><span class="msubsup" id="MathJax-Span-24"><span style="display: inline-block; position: relative; height: 0px; width: 1.256em; "><span style="position: absolute; clip: rect(1.723em 1000em 2.765em -0.473em); top: -2.575em; left: 0em; "><span class="mi" id="MathJax-Span-25" style="font-family: MathJax_Math; font-style: italic; ">R</span><span style="display: inline-block; width: 0px; height: 2.575em; "></span></span><span style="position: absolute; top: -2.312em; left: 0.731em; "><span class="mi" id="MathJax-Span-26" style="font-size: 70.7%; font-family: MathJax_Math; font-style: italic; ">L</span><span style="display: inline-block; width: 0px; height: 2.462em; "></span></span></span></span></span><span style="display: inline-block; width: 0px; height: 4em; "></span></span></span><span style="border-left-width: 0em; border-left-style: solid; border-left-color: initial; display: inline-block; overflow-x: hidden; overflow-y: hidden; width: 0px; height: 1.201em; vertical-align: -0.262em; "></span></span></nobr></span><script type="math/tex" id="MathJax-Element-4">R_L</script>, for which the
+maximum power is transferred to the load.  (Hint: remember your calculus!)
+<br>
+What is this optimum load resistance (in Ohms)?
+</span> <span answer="" id="" state=""> <input type="text" name="input_filenameHW2L3h2_2_1" id="input_filenameHW2L3h2_2_1" value=""> <span id="answer_filenameHW2L3h2_2_1"></span> <span class="unanswered" style="display:inline-block;" id="status_filenameHW2L3h2_2_1"></span> </span> <span> <br> 
+What is the power (in Watts) that is delivered to this best load resistance?
+</span> <span answer="" id="" state=""> <input type="text" name="input_filenameHW2L3h2_3_1" id="input_filenameHW2L3h2_3_1" value=""> <span id="answer_filenameHW2L3h2_3_1"></span> <span class="unanswered" style="display:inline-block;" id="status_filenameHW2L3h2_3_1"></span> </span> <span> <br> 
+What is the Thevenin equivalent resistance (in Ohms) of the power source as seen
+by the load resistance?
+</span> <span answer="" id="" state=""> <input type="text" name="input_filenameHW2L3h2_4_1" id="input_filenameHW2L3h2_4_1" value=""> <span id="answer_filenameHW2L3h2_4_1"></span> <span class="unanswered" style="display:inline-block;" id="status_filenameHW2L3h2_4_1"></span> </span> <span> <br> 
+Hmmmmmm.
+</span> </div> <section class="action"> <input type="hidden" name="problem_id" value="H2P2: Solar Power"> <input id="check_filenameHW2L3h2" type="button" value="Check "> </section> </section>
+</section> </li> <li id="vert-2"> <section id="main_filenameHW2L4e1" class="problems-wrapper"><h2>H2P3: Logic Diagrams</h2> <section class="problem"> <div> <span> <center> <img src="./Unit2HW_files/ha-hs.gif"> </center>
+In the figure above there are four two-input two-output logic
+circuits.  Each circuit is equivalent, in that it computes the same
+logic function, as another circuit in the figure.
+<br>
+Which circuit is equivalent to circuit number <span class="MathJax_Preview"></span><span class="MathJax" id="MathJax-Element-19-Frame" role="textbox" aria-readonly="true" style=""><nobr><span class="math" id="MathJax-Span-113"><span style="display: inline-block; position: relative; height: 0px; font-size: 127%; width: 0.506em; "><span style="position: absolute; clip: rect(1.965em 1000em 2.969em -0.423em); top: -2.8em; left: 0em; "><span class="mrow" id="MathJax-Span-114"><span class="mn" id="MathJax-Span-115" style="font-family: MathJax_Main; ">1</span></span><span style="display: inline-block; width: 0px; height: 2.8em; "></span></span></span><span style="border-left-width: 0em; border-left-style: solid; border-left-color: initial; display: inline-block; overflow-x: hidden; overflow-y: hidden; width: 0px; height: 0.989em; vertical-align: -0.071em; "></span></span></nobr></span><script type="math/tex" id="MathJax-Element-19">1</script>?  Enter the
+number of the equivalent circuit in the box provided:
+</span> <span answer="" id="" state=""> <input type="text" name="input_filenameHW2L4e1_2_1" id="input_filenameHW2L4e1_2_1" value=""> <span id="answer_filenameHW2L4e1_2_1"></span> <span class="unanswered" style="display:inline-block;" id="status_filenameHW2L4e1_2_1"></span> </span> <span> <br>
+The truth table for a two-input function has only four lines.
+<center> <img src="./Unit2HW_files/ha-hs-tt.gif"> </center>
+Fill in the missing information in the truth table for the circuit
+number <span class="MathJax_Preview"></span><span class="MathJax" id="MathJax-Element-20-Frame" role="textbox" aria-readonly="true" style=""><nobr><span class="math" id="MathJax-Span-116"><span style="display: inline-block; position: relative; height: 0px; font-size: 127%; width: 0.506em; "><span style="position: absolute; clip: rect(1.965em 1000em 2.969em -0.423em); top: -2.8em; left: 0em; "><span class="mrow" id="MathJax-Span-117"><span class="mn" id="MathJax-Span-118" style="font-family: MathJax_Main; ">1</span></span><span style="display: inline-block; width: 0px; height: 2.8em; "></span></span></span><span style="border-left-width: 0em; border-left-style: solid; border-left-color: initial; display: inline-block; overflow-x: hidden; overflow-y: hidden; width: 0px; height: 0.989em; vertical-align: -0.071em; "></span></span></nobr></span><script type="math/tex" id="MathJax-Element-20">1</script>.
+<br>
+What is the entry in the box labeled <span class="MathJax_Preview"></span><span class="MathJax" id="MathJax-Element-21-Frame" role="textbox" aria-readonly="true" style=""><nobr><span class="math" id="MathJax-Span-119"><span style="display: inline-block; position: relative; height: 0px; font-size: 127%; width: 0.506em; "><span style="position: absolute; clip: rect(1.965em 1000em 2.754em -0.473em); top: -2.575em; left: 0em; "><span class="mrow" id="MathJax-Span-120"><span class="mi" id="MathJax-Span-121" style="font-family: MathJax_Math; font-style: italic; ">a</span></span><span style="display: inline-block; width: 0px; height: 2.575em; "></span></span></span><span style="border-left-width: 0em; border-left-style: solid; border-left-color: initial; display: inline-block; overflow-x: hidden; overflow-y: hidden; width: 0px; height: 0.716em; vertical-align: -0.084em; "></span></span></nobr></span><script type="math/tex" id="MathJax-Element-21">a</script>?
+</span> <span answer="" id="" state=""> <input type="text" name="input_filenameHW2L4e1_3_1" id="input_filenameHW2L4e1_3_1" value=""> <span id="answer_filenameHW2L4e1_3_1"></span> <span class="unanswered" style="display:inline-block;" id="status_filenameHW2L4e1_3_1"></span> </span> <span> <br>
+What is the entry in the box labeled <span class="MathJax_Preview"></span><span class="MathJax" id="MathJax-Element-22-Frame" role="textbox" aria-readonly="true" style=""><nobr><span class="math" id="MathJax-Span-122"><span style="display: inline-block; position: relative; height: 0px; font-size: 127%; width: 0.394em; "><span style="position: absolute; clip: rect(1.712em 1000em 2.755em -0.466em); top: -2.575em; left: 0em; "><span class="mrow" id="MathJax-Span-123"><span class="mi" id="MathJax-Span-124" style="font-family: MathJax_Math; font-style: italic; ">b</span></span><span style="display: inline-block; width: 0px; height: 2.575em; "></span></span></span><span style="border-left-width: 0em; border-left-style: solid; border-left-color: initial; display: inline-block; overflow-x: hidden; overflow-y: hidden; width: 0px; height: 1.038em; vertical-align: -0.085em; "></span></span></nobr></span><script type="math/tex" id="MathJax-Element-22">b</script>?
+</span> <span answer="" id="" state=""> <input type="text" name="input_filenameHW2L4e1_4_1" id="input_filenameHW2L4e1_4_1" value=""> <span id="answer_filenameHW2L4e1_4_1"></span> <span class="unanswered" style="display:inline-block;" id="status_filenameHW2L4e1_4_1"></span> </span> <span> <br>
+What is the entry in the box labeled <span class="MathJax_Preview"></span><span class="MathJax" id="MathJax-Element-23-Frame" role="textbox" aria-readonly="true" style=""><nobr><span class="math" id="MathJax-Span-125"><span style="display: inline-block; position: relative; height: 0px; font-size: 127%; width: 0.394em; "><span style="position: absolute; clip: rect(1.964em 1000em 2.755em -0.472em); top: -2.575em; left: 0em; "><span class="mrow" id="MathJax-Span-126"><span class="mi" id="MathJax-Span-127" style="font-family: MathJax_Math; font-style: italic; ">c</span></span><span style="display: inline-block; width: 0px; height: 2.575em; "></span></span></span><span style="border-left-width: 0em; border-left-style: solid; border-left-color: initial; display: inline-block; overflow-x: hidden; overflow-y: hidden; width: 0px; height: 0.718em; vertical-align: -0.085em; "></span></span></nobr></span><script type="math/tex" id="MathJax-Element-23">c</script>?
+</span> <span answer="" id="" state=""> <input type="text" name="input_filenameHW2L4e1_5_1" id="input_filenameHW2L4e1_5_1" value=""> <span id="answer_filenameHW2L4e1_5_1"></span> <span class="unanswered" style="display:inline-block;" id="status_filenameHW2L4e1_5_1"></span> </span> <span> <br>
+What is the entry in the box labeled <span class="MathJax_Preview"></span><span class="MathJax" id="MathJax-Element-24-Frame" role="textbox" aria-readonly="true" style=""><nobr><span class="math" id="MathJax-Span-128"><span style="display: inline-block; position: relative; height: 0px; font-size: 127%; width: 0.506em; "><span style="position: absolute; clip: rect(1.712em 1000em 2.754em -0.473em); top: -2.575em; left: 0em; "><span class="mrow" id="MathJax-Span-129"><span class="mi" id="MathJax-Span-130" style="font-family: MathJax_Math; font-style: italic; ">d<span style="display: inline-block; overflow-x: hidden; overflow-y: hidden; height: 1px; width: 0.003em; "></span></span></span><span style="display: inline-block; width: 0px; height: 2.575em; "></span></span></span><span style="border-left-width: 0em; border-left-style: solid; border-left-color: initial; display: inline-block; overflow-x: hidden; overflow-y: hidden; width: 0px; height: 1.037em; vertical-align: -0.084em; "></span></span></nobr></span><script type="math/tex" id="MathJax-Element-24">d</script>?
+</span> <span answer="" id="" state=""> <input type="text" name="input_filenameHW2L4e1_6_1" id="input_filenameHW2L4e1_6_1" value=""> <span id="answer_filenameHW2L4e1_6_1"></span> <span class="unanswered" style="display:inline-block;" id="status_filenameHW2L4e1_6_1"></span> </span> <span> <br>
+What is the entry in the box labeled <span class="MathJax_Preview"></span><span class="MathJax" id="MathJax-Element-25-Frame" role="textbox" aria-readonly="true" style=""><nobr><span class="math" id="MathJax-Span-131"><span style="display: inline-block; position: relative; height: 0px; font-size: 127%; width: 0.45em; "><span style="position: absolute; clip: rect(1.964em 1000em 2.755em -0.467em); top: -2.575em; left: 0em; "><span class="mrow" id="MathJax-Span-132"><span class="mi" id="MathJax-Span-133" style="font-family: MathJax_Math; font-style: italic; ">e</span></span><span style="display: inline-block; width: 0px; height: 2.575em; "></span></span></span><span style="border-left-width: 0em; border-left-style: solid; border-left-color: initial; display: inline-block; overflow-x: hidden; overflow-y: hidden; width: 0px; height: 0.718em; vertical-align: -0.085em; "></span></span></nobr></span><script type="math/tex" id="MathJax-Element-25">e</script>?
+</span> <span answer="" id="" state=""> <input type="text" name="input_filenameHW2L4e1_7_1" id="input_filenameHW2L4e1_7_1" value=""> <span id="answer_filenameHW2L4e1_7_1"></span> <span class="unanswered" style="display:inline-block;" id="status_filenameHW2L4e1_7_1"></span> </span> <span> <br>
+What is the entry in the box labeled <span class="MathJax_Preview"></span><span class="MathJax" id="MathJax-Element-26-Frame" role="textbox" aria-readonly="true" style=""><nobr><span class="math" id="MathJax-Span-134"><span style="display: inline-block; position: relative; height: 0px; font-size: 127%; width: 0.45em; "><span style="position: absolute; clip: rect(1.701em 1000em 2.949em -0.451em); top: -2.575em; left: 0em; "><span class="mrow" id="MathJax-Span-135"><span class="mi" id="MathJax-Span-136" style="font-family: MathJax_Math; font-style: italic; ">f<span style="display: inline-block; overflow-x: hidden; overflow-y: hidden; height: 1px; width: 0.06em; "></span></span></span><span style="display: inline-block; width: 0px; height: 2.575em; "></span></span></span><span style="border-left-width: 0em; border-left-style: solid; border-left-color: initial; display: inline-block; overflow-x: hidden; overflow-y: hidden; width: 0px; height: 1.299em; vertical-align: -0.332em; "></span></span></nobr></span><script type="math/tex" id="MathJax-Element-26">f</script>?
+</span> <span answer="" id="" state=""> <input type="text" name="input_filenameHW2L4e1_8_1" id="input_filenameHW2L4e1_8_1" value=""> <span id="answer_filenameHW2L4e1_8_1"></span> <span class="unanswered" style="display:inline-block;" id="status_filenameHW2L4e1_8_1"></span> </span> <span> <br>
+What is the entry in the box labeled <span class="MathJax_Preview"></span><span class="MathJax" id="MathJax-Element-27-Frame" role="textbox" aria-readonly="true" style=""><nobr><span class="math" id="MathJax-Span-137"><span style="display: inline-block; position: relative; height: 0px; font-size: 127%; width: 0.45em; "><span style="position: absolute; clip: rect(1.964em 1000em 2.949em -0.496em); top: -2.575em; left: 0em; "><span class="mrow" id="MathJax-Span-138"><span class="mi" id="MathJax-Span-139" style="font-family: MathJax_Math; font-style: italic; ">g<span style="display: inline-block; overflow-x: hidden; overflow-y: hidden; height: 1px; width: 0.003em; "></span></span></span><span style="display: inline-block; width: 0px; height: 2.575em; "></span></span></span><span style="border-left-width: 0em; border-left-style: solid; border-left-color: initial; display: inline-block; overflow-x: hidden; overflow-y: hidden; width: 0px; height: 0.965em; vertical-align: -0.332em; "></span></span></nobr></span><script type="math/tex" id="MathJax-Element-27">g</script>?
+</span> <span answer="" id="" state=""> <input type="text" name="input_filenameHW2L4e1_9_1" id="input_filenameHW2L4e1_9_1" value=""> <span id="answer_filenameHW2L4e1_9_1"></span> <span class="unanswered" style="display:inline-block;" id="status_filenameHW2L4e1_9_1"></span> </span> <span> <br>
+What is the entry in the box labeled <span class="MathJax_Preview"></span><span class="MathJax" id="MathJax-Element-28-Frame" role="textbox" aria-readonly="true" style=""><nobr><span class="math" id="MathJax-Span-140"><span style="display: inline-block; position: relative; height: 0px; font-size: 127%; width: 0.562em; "><span style="position: absolute; clip: rect(1.712em 1000em 2.755em -0.458em); top: -2.575em; left: 0em; "><span class="mrow" id="MathJax-Span-141"><span class="mi" id="MathJax-Span-142" style="font-family: MathJax_Math; font-style: italic; ">h</span></span><span style="display: inline-block; width: 0px; height: 2.575em; "></span></span></span><span style="border-left-width: 0em; border-left-style: solid; border-left-color: initial; display: inline-block; overflow-x: hidden; overflow-y: hidden; width: 0px; height: 1.038em; vertical-align: -0.085em; "></span></span></nobr></span><script type="math/tex" id="MathJax-Element-28">h</script>?
+</span> <span answer="" id="" state=""> <input type="text" name="input_filenameHW2L4e1_10_1" id="input_filenameHW2L4e1_10_1" value=""> <span id="answer_filenameHW2L4e1_10_1"></span> <span class="unanswered" style="display:inline-block;" id="status_filenameHW2L4e1_10_1"></span> </span> </div> <section class="action"> <input type="hidden" name="problem_id" value="H2P3: Logic Diagrams"> <input id="check_filenameHW2L4e1" type="button" value="Check "> </section> </section>
+</section> </li> </ol> </section> </div> </section> <footer> <!-- Template based on a design from http://www.dotemplate.com/ - Donated $10 (pmitros) so we don't need to include credit. --> <p> Copyright © 2012. MIT. <a href="https://6002x.mitx.mit.edu/t/copyright.html">Some rights reserved.</a> </p> <nav> <ul class="social"> <li class="linkedin"> <a href="http://www.linkedin.com/groups/Friends-Alumni-MITx-4316538">Linked In</a> </li> <li class="twitter"> <a href="https://twitter.com/#!/MyMITx">Twitter</a> </li> <li class="facebook"> <a href="http://www.facebook.com/pages/MITx/378592442151504">Facebook</a> </li> </ul> <ul> <li><a href="https://6002x.mitx.mit.edu/courseware/6.002_Spring_2012/Week_2/Linearity%2C_Thevenin_and_Norton%3B_Digital/#feedback_div" rel="leanModal">Feedback</a></li> <li><a href="https://6002x.mitx.mit.edu/courseware/6.002_Spring_2012/Week_2/Linearity%2C_Thevenin_and_Norton%3B_Digital/#calculator_div" rel="leanModal">Calculator</a></li> <li><a href="https://6002x.mitx.mit.edu/s/help.html">Help</a></li> <li><a href="https://6002x.mitx.mit.edu/logout">Log out</a></li> </ul> </nav> </footer> <div id="feedback_div" class="leanModal_box"> <p>Found a bug? Got an idea for improving our system? Let us know.</p> <form> <ol> <li><label>Subject:</label> <input type="text" id="feedback_subject"></li> <li><label>Feedback: </label><textarea id="feedback_message"></textarea></li> <li><input id="feedback_button" type="button" value="Submit"></li> </ol> </form> </div> <div id="calculator_div" class="leanModal_box"> <form id="calculator"> <input type="text" id="calculator_input"> <input id="calculator_button" type="submit" value="="> <input type="text" id="calculator_output" readonly=""> </form> <dl> <dt>Suffixes:</dt> <dd> %kMGTcmunp</dd> <dt>Operations:</dt> <dd>^ * / + - ()</dd> <dt>Functions:</dt> <dd>sin, cos, tan, sqrt, log10, log2, ln, arccos, arcsin, arctan, abs </dd> <dt>Constants</dt> <dd>e, pi</dd> <!-- Students won't know what parallel means at this time.  Complex numbers aren't well tested in the courseware, so we would prefer to not expose them.  If you read the comments in the source, feel free to use them. If you run into a bug, please let us know. But we can't officially support them right now.
+
+       <dt>Unsupported:</dt> <dd>||, j </dd>  --> </dl> </div> <script type="text/javascript" src="./Unit2HW_files/jquery.treeview.js"></script> <script type="text/javascript" src="./Unit2HW_files/jquery.leanModal.min.js"></script> <script type="text/javascript" src="./Unit2HW_files/jquery.cookie.js"></script> <script type="text/javascript" src="./Unit2HW_files/video_player.js"></script> <script type="text/javascript" src="./Unit2HW_files/schematic.js"></script> <script type="text/javascript" src="./Unit2HW_files/cktsim.js"></script> <script>
+  // Feedback form
+$(function() {
+    $("#feedback_button").click(function(){
+      postJSON("/send_feedback", {"subject":$("#feedback_subject").attr("value"),
+        "url":document.URL,
+        "message":$("#feedback_message").attr("value")},
+        function(data){
+        $("#feedback_subject").attr("value","");
+        $("#feedback_message").attr("value","");
+        $("#feedback_div").html("Feedback submitted. Thank you");
+        });
+      });
+    });
+
+// Calculator
+$(function() {
+    $("form#calculator").submit(function(e){
+      e.preventDefault();
+      $.getJSON("/calculate", {"equation":$("#calculator_input").attr("value")},
+        function(data){
+        $("#calculator_output").attr("value",data.result);
+        });
+      });
+    });
+
+$(function(){
+    $("a[rel*=leanModal]").leanModal();
+    });
+</script> <!-- TODO: http://docs.jquery.com/Plugins/Validation --> <script type="text/javascript">
+  $(function() {
+    $("#accordion").accordion({
+  active: 2,
+  header: 'h3',
+  autoHeight: false,
+});
+
+$("#open_close_accordion a").click(function(){
+  if ($(".course-wrapper").hasClass("closed")){
+    $(".course-wrapper").removeClass("closed");
+  } else {
+    $(".course-wrapper").addClass("closed");
+  }
+});
+
+$('.ui-accordion').bind('accordionchange', function(event, ui) {
+   var event_data = {'newheader':ui.newHeader.text(),
+         'oldheader':ui.oldHeader.text()};
+   log_event('accordion', event_data);
+});
+function filenameHW2L3h1_load() {
+  $('#main_filenameHW2L3h1').load('/modx/problem/filenameHW2L3h1/problem_get?id=filenameHW2L3h1', 
+  function() {
+  MathJax.Hub.Queue(["Typeset",MathJax.Hub]);
+  update_schematics();
+
+  $('#check_filenameHW2L3h1').click(function() {
+  $("input.schematic").each(function(index,element){ element.schematic.update_value(); });
+    var submit_data={};
+    $.each($("[id^=input_filenameHW2L3h1_]"), function(index,value){
+      submit_data[value.id]=value.value;
+    });
+    postJSON('/modx/problem/filenameHW2L3h1/problem_check',
+    submit_data,
+    function(json) {
+      switch(json.success) {
+      case 'incorrect': // Worked, but answer not 
+      case 'correct':
+	  filenameHW2L3h1_load();
+      //alert("!!"+json.success);  
+          break;
+      default:
+        alert(json.success);  
+      }
+    });
+    log_event('problem_check', submit_data);
+  });
+
+  $('#reset_filenameHW2L3h1').click(function() {
+    var submit_data={};
+    $.each($("[id^=input_filenameHW2L3h1_]"), function(index,value){
+      submit_data[value.id]=value.value;
+    });
+
+    postJSON('/modx/problem/filenameHW2L3h1/problem_reset', {'id':'filenameHW2L3h1'}, function(json) {
+      filenameHW2L3h1_load();
+    });
+    log_event('problem_reset', submit_data);
+  });
+
+  $('#show_filenameHW2L3h1').click(function() {
+    postJSON('/modx/problem/filenameHW2L3h1/problem_show', {}, function(data) {
+      for (var key in data) {
+      $("#answer_"+key).text(data[key]);
+    }
+  });
+
+  log_event('problem_show', {'problem':'filenameHW2L3h1'});
+});
+
+$('#save_filenameHW2L3h1').click(function() {
+  $("input.schematic").each(function(index,element){ element.schematic.update_value(); });
+  var submit_data={};
+  $.each($("[id^=input_filenameHW2L3h1_]"), function(index,value){
+    submit_data[value.id]=value.value;});
+    postJSON('/modx/problem/filenameHW2L3h1/problem_save',
+    submit_data, function(data){
+      if(data.success) {
+        alert('Saved');
+      }}
+    );
+    log_event('problem_save', submit_data);
+  });
+}
+);}
+
+$(function() {
+  filenameHW2L3h1_load();
+});
+function filenameHW2L3h2_load() {
+  $('#main_filenameHW2L3h2').load('/modx/problem/filenameHW2L3h2/problem_get?id=filenameHW2L3h2', 
+  function() {
+  MathJax.Hub.Queue(["Typeset",MathJax.Hub]);
+  update_schematics();
+
+  $('#check_filenameHW2L3h2').click(function() {
+  $("input.schematic").each(function(index,element){ element.schematic.update_value(); });
+    var submit_data={};
+    $.each($("[id^=input_filenameHW2L3h2_]"), function(index,value){
+      submit_data[value.id]=value.value;
+    });
+    postJSON('/modx/problem/filenameHW2L3h2/problem_check',
+    submit_data,
+    function(json) {
+      switch(json.success) {
+      case 'incorrect': // Worked, but answer not 
+      case 'correct':
+	  filenameHW2L3h2_load();
+      //alert("!!"+json.success);  
+          break;
+      default:
+        alert(json.success);  
+      }
+    });
+    log_event('problem_check', submit_data);
+  });
+
+  $('#reset_filenameHW2L3h2').click(function() {
+    var submit_data={};
+    $.each($("[id^=input_filenameHW2L3h2_]"), function(index,value){
+      submit_data[value.id]=value.value;
+    });
+
+    postJSON('/modx/problem/filenameHW2L3h2/problem_reset', {'id':'filenameHW2L3h2'}, function(json) {
+      filenameHW2L3h2_load();
+    });
+    log_event('problem_reset', submit_data);
+  });
+
+  $('#show_filenameHW2L3h2').click(function() {
+    postJSON('/modx/problem/filenameHW2L3h2/problem_show', {}, function(data) {
+      for (var key in data) {
+      $("#answer_"+key).text(data[key]);
+    }
+  });
+
+  log_event('problem_show', {'problem':'filenameHW2L3h2'});
+});
+
+$('#save_filenameHW2L3h2').click(function() {
+  $("input.schematic").each(function(index,element){ element.schematic.update_value(); });
+  var submit_data={};
+  $.each($("[id^=input_filenameHW2L3h2_]"), function(index,value){
+    submit_data[value.id]=value.value;});
+    postJSON('/modx/problem/filenameHW2L3h2/problem_save',
+    submit_data, function(data){
+      if(data.success) {
+        alert('Saved');
+      }}
+    );
+    log_event('problem_save', submit_data);
+  });
+}
+);}
+
+$(function() {
+  filenameHW2L3h2_load();
+});
+function filenameHW2L4e1_load() {
+  $('#main_filenameHW2L4e1').load('/modx/problem/filenameHW2L4e1/problem_get?id=filenameHW2L4e1', 
+  function() {
+  MathJax.Hub.Queue(["Typeset",MathJax.Hub]);
+  update_schematics();
+
+  $('#check_filenameHW2L4e1').click(function() {
+  $("input.schematic").each(function(index,element){ element.schematic.update_value(); });
+    var submit_data={};
+    $.each($("[id^=input_filenameHW2L4e1_]"), function(index,value){
+      submit_data[value.id]=value.value;
+    });
+    postJSON('/modx/problem/filenameHW2L4e1/problem_check',
+    submit_data,
+    function(json) {
+      switch(json.success) {
+      case 'incorrect': // Worked, but answer not 
+      case 'correct':
+	  filenameHW2L4e1_load();
+      //alert("!!"+json.success);  
+          break;
+      default:
+        alert(json.success);  
+      }
+    });
+    log_event('problem_check', submit_data);
+  });
+
+  $('#reset_filenameHW2L4e1').click(function() {
+    var submit_data={};
+    $.each($("[id^=input_filenameHW2L4e1_]"), function(index,value){
+      submit_data[value.id]=value.value;
+    });
+
+    postJSON('/modx/problem/filenameHW2L4e1/problem_reset', {'id':'filenameHW2L4e1'}, function(json) {
+      filenameHW2L4e1_load();
+    });
+    log_event('problem_reset', submit_data);
+  });
+
+  $('#show_filenameHW2L4e1').click(function() {
+    postJSON('/modx/problem/filenameHW2L4e1/problem_show', {}, function(data) {
+      for (var key in data) {
+      $("#answer_"+key).text(data[key]);
+    }
+  });
+
+  log_event('problem_show', {'problem':'filenameHW2L4e1'});
+});
+
+$('#save_filenameHW2L4e1').click(function() {
+  $("input.schematic").each(function(index,element){ element.schematic.update_value(); });
+  var submit_data={};
+  $.each($("[id^=input_filenameHW2L4e1_]"), function(index,value){
+    submit_data[value.id]=value.value;});
+    postJSON('/modx/problem/filenameHW2L4e1/problem_save',
+    submit_data, function(data){
+      if(data.success) {
+        alert('Saved');
+      }}
+    );
+    log_event('problem_save', submit_data);
+  });
+}
+);}
+
+$(function() {
+  filenameHW2L4e1_load();
+});
+
+
+    $(".sequence-nav li a").hover(function(){
+      $(this).siblings().toggle();
+      });
+  });
+</script> <script type="text/javascript">if(!NREUMQ.f){NREUMQ.f=function(){NREUMQ.push(["load",new Date().getTime()]);var e=document.createElement("script");e.type="text/javascript";e.async=true;e.src="https://d1ros97qkrwjf5.cloudfront.net/30/eum/rum.js";document.body.appendChild(e);if(NREUMQ.a)NREUMQ.a();};NREUMQ.a=window.onload;window.onload=NREUMQ.f;};NREUMQ.push(["nrf2","beacon-1.newrelic.com","1beac94c95",404692,"NQQGYUZWDUNSVUMPWQxOIkBaVBdZXFgYBVkXExdQQ1YRVR1AXgNBEVsNW1BSGw==",0,44,new Date().getTime()])</script> 
+<div id="lean_overlay"></div><div id="MathJax_Font_Test" style="position: absolute; visibility: hidden; top: 0px; left: 0px; width: auto; padding-top: 0px; padding-right: 0px; padding-bottom: 0px; padding-left: 0px; border-top-width: 0px; border-right-width: 0px; border-bottom-width: 0px; border-left-width: 0px; border-style: initial; border-color: initial; border-image: initial; margin-top: 0px; margin-right: 0px; margin-bottom: 0px; margin-left: 0px; white-space: nowrap; text-align: left; text-indent: 0px; text-transform: none; line-height: normal; letter-spacing: normal; word-spacing: normal; font-weight: normal; font-style: normal; font-family: MathJax_Main, sans-serif; font-size: 40px; "></div><script type="text/javascript" async="" src="./Unit2HW_files/rum.js"></script><script id="nreum-send-beacon" type="text/x-nreum-data"></script></body></html>
