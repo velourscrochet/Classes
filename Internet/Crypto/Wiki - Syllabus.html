@@ -1,0 +1,332 @@
+
+
+<!DOCTYPE html>
+<html lang="en-US">
+
+<head>
+<meta charset="utf-8" />
+<title>Wiki - Syllabus</title>
+
+<link rel="stylesheet" href="https://class.coursera.org/assets/core/css/bootstrap.min.css" />
+<link rel="stylesheet" href="https://class.coursera.org/assets/core/css/main.css" />
+<link rel="stylesheet" href="https://class.coursera.org/assets/core/css/font-awesome.css" />
+<script type="text/javascript" src="https://class.coursera.org/assets/core/js/jquery.js"></script>
+<script type="text/javascript" src="https://class.coursera.org/assets/core/js/json.js"></script>
+<script type="text/javascript" src="https://class.coursera.org/assets/core/js/hc_fix.js"></script>
+<script src="https://class.coursera.org/assets/core/js/bootstrap/bootstrap-modal.js" type="text/javascript"></script>
+<script src="https://class.coursera.org/assets/core/js/modal_focus.js" type="text/javascript"></script>
+<script src="https://class.coursera.org/assets/core/js/bind_modal_focus.js" type="text/javascript"></script>
+<script src="https://class.coursera.org/assets/core/js/top_nav_bar.js" type="text/javascript"></script>
+<script type="text/javascript" src="https://class.coursera.org/assets/core/js/mathjax2/MathJax.js?config=default"></script>
+<link rel="stylesheet" href="https://class.coursera.org/assets/app/wiki/css/view.css" />
+<script type="text/javascript">
+
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-28377374-1']);
+  _gaq.push(['_setDomainName', 'coursera.org']);
+  _gaq.push(['_setAllowLinker', true]);  
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+
+  window._204 = window._204 || [];
+  window._204.push({key:"pageview", val:{}});
+
+  (function()
+  {
+    var a = document.createElement('script'); a.type = 'text/javascript'; a.async = true;
+    a.src = 'https://eventing.coursera.org/204.min.js?client=spark&user=568889';
+    var s = document.getElementsByTagName('script')[0];
+    s.parentNode.insertBefore(a, s);
+  })();
+
+</script>
+<link rel="icon" href="https://spark-university.s3.amazonaws.com/stanford-crypto/static/images/favicon.ico" />
+
+</head>
+
+<body>
+    <a href="#page-content" class="hidden">Skip Navigation</a>
+    <div class="hidden">
+        This page features MathJax technology to render mathematical formulae.
+        If you are using a screen reader, please visit <a href="http://www.dessci.com/en/products/mathplayer/">MathPlayer</a> to download the plugin for your browser. Please note that this is an Internet Explorer-only plugin at this time.
+    </div>
+
+    <h1 class="hidden">Introduction to Cryptography</h1>
+
+	
+<div class="coursera_topbar"
+ >
+    <h2 class="hidden">Top Navigation Bar</h2>
+
+    <div class="coursera_navbar_container">
+        <ul class="coursera_toplevel_nav" id="coursera_topbar">
+            <li class="coursera_top_item"><a href="https://www.coursera.org/courses/" target="_new">Courses</a></li>
+
+            
+            <li class="coursera_top_item">
+                <a href="#" rel="dropdown_aboutus" style="cursor:hand">About <i class="icon-caret-down"></i></a>
+            </li>
+
+                        
+            <li class="coursera_top_item">
+                <a href="#" rel="dropdown_my">Vicki Crosson <i class="icon-caret-down"></i></a>
+            </li>
+            
+                    </ul>
+    </div>
+
+    <ul id="dropdown_aboutus" class="coursera_submenu_nav">
+        <li class="coursera_sub_item"><a href="https://www.coursera.org/about/jobs" target="_new">Jobs</a></li>
+        <li class="coursera_sub_item"><a href="https://www.coursera.org/about/team" target="_new">Team</a></li>
+        <li class="coursera_sub_item"><a href="https://www.coursera.org/about/contact" target="_new">Contact Us</a></li>
+        <li class="coursera_sub_item"><a href="https://www.coursera.org/about/" target="_new">About Us</a></li>
+    </ul>
+
+    <ul id="dropdown_my" class="coursera_submenu_nav">
+        <li class="coursera_sub_item"><a href="https://www.coursera.org/" target="_new">My Courses</a></li>
+        <li class="coursera_sub_item"><a href="https://www.coursera.org/account/profile" target="_new">My Profile</a></li>
+        <li class="coursera_sub_item"><a href="https://class.coursera.org/crypto-2012-002/class/preferences">Course Preferences</a></li>
+        <li class="coursera_sub_item"><a href="https://class.coursera.org/crypto-2012-002/auth/logout">Logout</a></li>
+    </ul>
+
+    <div class="coursera_logo_container">
+        <a href="https://www.coursera.org/">
+        <img id="coursera_topbar_logo" src="https://class.coursera.org/assets/core/images/topbar-coursera-logo.png" alt="Coursera">
+        </a>
+    </div>
+
+</div>
+
+
+<div id="banner-top" style="background:repeat-x url('https://s3.amazonaws.com/coursera/universities/stanford/top-banner-background.png')">
+    <div id="course-logo-text">
+        <a href="https://class.coursera.org/crypto-2012-002/class/index">
+            <div>
+                <div>
+                    <img src="https://s3.amazonaws.com/coursera/universities/stanford/top-banner.png" />
+                </div>
+                <div class="course-logo-image" style="position:absolute;top:47px;left:17px;height:68px;width:120px;">
+                    <div style="background-position:-5px 0px;background-size:130px;height:68px;width:120px;background-image:url('https://s3.amazonaws.com/coursera/topics/crypto/small-icon.hover.png')">
+                        
+                    </div>
+                </div>
+            </div>
+            <div class="course-logo-name" style="position:absolute;top:87px;left:155px;">
+                <nobr>Introduction to Cryptography</nobr>
+            </div>
+        </a>
+    </div>
+    <div id="banner-course-info">
+        <div class="course-instructor-name">Dan Boneh</div>
+        <div class="course-time">Professor of Computer Science</div>
+    </div>
+</div>
+    
+        <div class="container-fluid">
+        <div class="sidebar page-sidebar" id="page-sidebar">
+            <h2 class="hidden">Side Navigation Bar</h2>
+<ul style="list-style-type:none;margin-left:0px;">
+		<li>
+		<p class="navbar_item navbar_home">
+				<a href="https://class.coursera.org/crypto-2012-002/class/index"  >
+			Home		</a>
+				</p>
+	</li>
+		<li>
+		<p class="navbar_item navbar_quiz">
+				<a href="https://class.coursera.org/crypto-2012-002/quiz/index?quiz_type=exam"  >
+			Final Exam		</a>
+				</p>
+	</li>
+		<li>
+		<p class="navbar_item navbar_quiz">
+				<a href="https://class.coursera.org/crypto-2012-002/quiz/index?quiz_type=homework"  >
+			Problem Sets		</a>
+				</p>
+	</li>
+		<li>
+		<p class="navbar_item navbar_lecture">
+				<a href="https://class.coursera.org/crypto-2012-002/lecture/index"  >
+			Video Lectures		</a>
+				</p>
+	</li>
+		<li>
+		<p class="navbar_item navbar_wiki">
+				<a href="https://class.coursera.org/crypto-2012-002/wiki/view?page=LectureSlidesPublicCourse"  >
+			Lecture Slides		</a>
+				</p>
+	</li>
+		<li>
+		<p class="navbar_item navbar_forum">
+				<a href="https://class.coursera.org/crypto-2012-002/forum/index"  >
+			Discussion Forums		</a>
+				</p>
+	</li>
+		<li>
+		<p class="navbar_item navbar_wiki">
+				<a href="https://class.coursera.org/crypto-2012-002/wiki/view?page=Overview"  >
+			Course Overview		</a>
+				</p>
+	</li>
+		<li>
+		<p class="navbar_item navbar_wiki">
+				<a href="https://class.coursera.org/crypto-2012-002/wiki/view?page=Syllabus"  >
+			Course Syllabus		</a>
+				</p>
+	</li>
+		<li>
+		<p class="navbar_item navbar_wiki">
+				<a href="http://www.universalsubtitles.org/en/teams/coursera/p/crypto"  >
+			Help with Subtitles		</a>
+				</p>
+	</li>
+		<li style="padding-top:20px;">
+		<p class="navbar_item navbar_about">
+			<a href="https://class.coursera.org/crypto-2012-002/class/aboutus">About The Course</a>
+		</p>
+	</li>
+</ul>
+
+        </div>
+        <div class="content page-content" id="page-content">
+            <h2>Syllabus</h2>
+<hr>
+<div id="internal_html_page_content">
+
+<h3>week 1</h3>
+
+<ul>
+<li>Background and overview.</li>
+
+<li>One-time encryption using stream ciphers.</li>
+
+<li>Semantic security.</li>
+
+</ul>
+<hr>
+<h3>week 2</h3>
+
+<ul>
+<li>Block ciphers and pseudorandom functions.</li>
+
+<li>Chosen plaintext security and modes of operation.</li>
+
+<li>The DES and AES block ciphers.</li>
+
+</ul>
+<hr>
+<h3>week 3</h3>
+
+<ul>
+<li>Message integrity. CBC-MAC, HMAC, PMAC, and CW-MAC.</li>
+
+<li>Collision resistant hashing.</li>
+
+</ul>
+<hr>
+<h3>week 4</h3>
+
+<ul>
+<li>Authenticated encryption. CCM, GCM, TLS, and IPsec.</li>
+
+<li>Key derivation functions.</li>
+
+<li>Odds and ends: deterministic encryption, non-expanding encryption,
+and format preserving encryption.</li>
+
+</ul>
+<hr>
+<h3>week 5</h3>
+
+<ul>
+<li>Basic key exchange: Diffie-Hellman, RSA, and Merkle puzzles.</li>
+
+<li>A crash course in computational number theory.</li>
+
+<li>Number theoretic hardness assumptions.</li>
+
+</ul>
+<hr>
+<h3>week 6</h3>
+
+<ul>
+<li>Public key encryption.</li>
+
+<li>Trapdoor permutations and RSA.</li>
+
+<li>The ElGamal system and variants.</li>
+
+</ul>
+<hr>
+<h2>Crypto II:   (part 2)</h2>
+
+<h5>(offered at a later date)</h5>
+
+
+
+<hr>
+<h3>week 1</h3>
+
+<ul>
+<li>Digital signatures and certificates.</li>
+
+</ul>
+<hr>
+<h3>week 2</h3>
+
+<ul>
+<li>Identification protocols.</li>
+
+<li>Authenticated key exchange and TLS key exchange</li>
+
+</ul>
+<hr>
+<h3>week 3</h3>
+
+<ul>
+<li>Zero knowledge protocols and proofs of knowledge.</li>
+
+<li>Privacy mechanisms: group signatures and credential systems.</li>
+
+</ul>
+<hr>
+<h3>week 4</h3>
+
+<ul>
+<li>Private information retrieval and oblivious transfer.</li>
+
+<li>Two party computation:   Yao's protocol and applications.</li>
+
+</ul>
+<h3>week 5</h3>
+
+
+<div style="margin-left:2em">
+One of the following advanced topics (chosen by popular demand):
+<ul>
+<li>Elliptic curve cryptography</li>
+      <li>Quantum computing</li>
+      <li>Pairing-based cryptography</li>
+      <li>Lattice-based cryptography</li>
+     <li>Fully homomorphic encryption</li>
+</ul>
+</div>
+</div>
+<hr>
+<div>
+    <div style="float:left">
+    	    	    	    	    	    </div>
+    <div style="float:right;text-align:right;font-size:10px;">
+    	Created Mon 13 Feb 2012  4:46:50 PM PST<br>
+    	Last Modified Mon  4 Jun 2012 10:17:26 AM PDT    </div>
+</div>
+        </div>
+    </div>
+        </body>
+
+</html>
