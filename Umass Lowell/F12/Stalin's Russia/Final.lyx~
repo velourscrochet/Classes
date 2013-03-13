@@ -1,0 +1,1286 @@
+#LyX 2.0 created this file. For more info see http://www.lyx.org/
+\lyxformat 413
+\begin_document
+\begin_header
+\textclass report
+\use_default_options true
+\maintain_unincluded_children false
+\language english
+\language_package default
+\inputencoding auto
+\fontencoding global
+\font_roman default
+\font_sans default
+\font_typewriter default
+\font_default_family default
+\use_non_tex_fonts false
+\font_sc false
+\font_osf false
+\font_sf_scale 100
+\font_tt_scale 100
+
+\graphics default
+\default_output_format default
+\output_sync 0
+\bibtex_command default
+\index_command default
+\paperfontsize default
+\spacing other 1.5
+\use_hyperref false
+\papersize default
+\use_geometry false
+\use_amsmath 1
+\use_esint 1
+\use_mhchem 1
+\use_mathdots 1
+\cite_engine basic
+\use_bibtopic false
+\use_indices false
+\paperorientation portrait
+\suppress_date false
+\use_refstyle 1
+\index Index
+\shortcut idx
+\color #008000
+\end_index
+\secnumdepth 3
+\tocdepth 3
+\paragraph_separation indent
+\paragraph_indentation default
+\quotes_language english
+\papercolumns 1
+\papersides 1
+\paperpagestyle default
+\tracking_changes false
+\output_changes false
+\html_math_output 0
+\html_css_as_file 0
+\html_be_strict false
+\end_header
+
+\begin_body
+
+\begin_layout Title
+Koba
+\end_layout
+
+\begin_layout Author
+Amber V.
+ Crosson
+\end_layout
+
+\begin_layout Date
+12/10/2012
+\end_layout
+
+\begin_layout Section*
+A Tyrant and his Idol
+\end_layout
+
+\begin_layout Standard
+There is no doubt in anyone’s mind that a person’s childhood experiences
+ can have lasting impact on his adult life.
+\begin_inset Foot
+status collapsed
+
+\begin_layout Plain Layout
+\begin_inset Quotes eld
+\end_inset
+
+Teenage Brains Are Malleable And Vulnerable, Researchers Say
+\begin_inset Quotes erd
+\end_inset
+
+ (http://www.npr.org/blogs/health/2012/10/16/162997951/teenage-brains-are-malleabl
+e-and-vulnerable-researchers-say) An NPR reporter discusses the difference
+ between adolescent and adult brains with a child phychiatrist.
+ Jon Hamilton.
+\end_layout
+
+\end_inset
+
+ In the case of Joseph Stalin, much energy has been devoted to discussing
+ the possibility of a personality disorder stemming from his conflicted
+ childhood.
+ Given the circumstances surrounding his family, during his upbringing in
+ the town of Gori, it makes sense that his parents could be so divided on
+ his upbringing.
+ His father Beso, expecting Joseph to lead a stable, working class life
+ as he did, would expect the certainty of a steady wage during hard times.
+ His mother, Keke, hoped that he could leave the current conditions, for
+ a better life than that found in their poor home.
+ It is understandable, though no less reprehensible, that his childhood
+ was very harsh.
+ 
+\begin_inset Foot
+status collapsed
+
+\begin_layout Plain Layout
+Robert Service, 
+\size normal
+\emph on
+Stalin: A Biography
+\emph default
+ (Cambridge, MA: The Belknap Press of Harvard University Press, 2006), p.
+ 19-21.
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Little work has been done, however, on the effect of Joseph Dzhugashvili’s
+ favorite book, which he read during his teenage years at seminary school.
+ He was so inspired by Alexander Kazbegi’s 
+\emph on
+The Patricide
+\emph default
+, that he insisted on being called Koba, after one of the valiant characters
+ of the book, for nearly twenty years.
+ As a childhood friend, Joseph Iremashvili has mentioned, “the subject of
+ [Stalin’s] dreams was Koba...He would become the second Koba, a fighter and
+ a hero.” 
+\begin_inset Foot
+status collapsed
+
+\begin_layout Plain Layout
+Joseph Iremashvili, 
+\emph on
+Stalin und die Tragodie Georgiens
+\emph default
+ (Berlin: Volksblatt-Bruckerei, 1932) p.
+ 18.
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Given that there are no copies of this novel available in English, it is
+ reasonable to assume that any description of the plot is, in the very best
+ of cases, a summary of a translation of a summary.
+ Because of this, many synopses are inaccurate, or more commonly, misrepresentat
+ive of the story line, retelling minor details as major plot elements.
+ The worst offender is quite possibly Montefiore, who in Young Stalin describes
+ how Koba “fights against the Russians, sacrificing everything for his wife
+ and country”
+\begin_inset Foot
+status collapsed
+
+\begin_layout Plain Layout
+Simon Sebag Montefiore, 
+\emph on
+Young Stalin 
+\emph default
+(New York:Alfred A.
+ Knopff, 2007) p.
+ 63.
+\end_layout
+
+\end_inset
+
+.
+ In the story, as we will soon see, Koba has a girlfriend (Marina), but
+ no wife.
+ He does not fight for his country, but rather against the officers who
+ locked his friend Iago in jail, and forced Iago's love Nunu to marry against
+ her will.
+ To claim that the fight was only incidentally against the Cossack rulers
+ would be unfair; however to claim that the entire book was “a sacrifice
+ for his country” is equally misleading.
+ 
+\end_layout
+
+\begin_layout Standard
+After searching unsuccessfully for a pair of summaries without inconsistencies,
+ I turned to Kazbegi's Russian translation of The Patricide, from which
+ to do my own research.
+ 
+\end_layout
+
+\begin_layout Section*
+Part One 
+\end_layout
+
+\begin_layout Standard
+At the start of the book, the story consists of two “holy” goals – true
+ love, and the free will to acquire it.
+ When a girl named Nunu is given to her aunt and uncle for a decent upbringing,
+ the only rule her father gives is that she must be wed for love.
+ An arranged marriage was entirely unacceptable.
+\begin_inset Foot
+status collapsed
+
+\begin_layout Plain Layout
+Alexander Kazbegi, 
+\emph on
+Oтцеубийца [The Patricide]
+\emph default
+ (1882), p.
+ 5.
+\end_layout
+
+\end_inset
+
+ As soon as he slinks guiltily out the door, the aunt and uncle send Nunu
+ into the field to work, and begin discussing to whom they will marry her,
+ in order to get her off their hands.
+ While in the field, she finds her beloved Iago, who is a poor serf.
+ They plan their wedding, future, and – if necessary – escape from an arranged
+ marriage.
+ 
+\end_layout
+
+\begin_layout Standard
+\begin_inset VSpace defskip
+\end_inset
+
+We are, here, fully engrossed in a classic love story, on par with the greatest
+ epics.
+ In the same way, Kazebegi writes nothing that is done on uncertain terms.
+ There are heroes, and there are villains.
+ There is true love, and there is lust.
+ There is white, and there is black.
+ Either you are with us, or you are against us.
+ 
+\end_layout
+
+\begin_layout Standard
+In Stalin’s government, and indeed the USSR as a whole, there were loyal
+ Bolsheviks, and there were enemies and spies.
+ There was nothing in between; any failure to comply with his philosophy
+ on life must in fact be a traitor to the cause.
+ It could not be human error, uncertainty, or inability to comply.
+ It was only treason, and the punishment for being an enemy of the state
+ was severe.
+ As Service mentions, Stalin usually believed his own misrepresentation
+ of the world around him.
+ “If ever he called somebody a traitor, it was not only the mind of others
+ he was manipulating” 
+\begin_inset Foot
+status collapsed
+
+\begin_layout Plain Layout
+Service p.337.
+\end_layout
+
+\end_inset
+
+.
+ In all fairness, this was the Bolshevik party line since the days of Lenin.
+ In a speech in 1920, he stated firmly that when 
+\begin_inset Quotes eld
+\end_inset
+
+we speak of this struggle of the proletariat; each man must choose between
+ joining our side or the other side.
+\begin_inset Quotes erd
+\end_inset
+
+ 
+\begin_inset Foot
+status collapsed
+
+\begin_layout Plain Layout
+Vladimir Lenin, 
+\begin_inset Quotes eld
+\end_inset
+
+Speech Delivered At An All-Russia Conference Of Political Education Workers
+ Of Gubernia and Uyezd Education Departments
+\begin_inset Quotes erd
+\end_inset
+
+, November 3, 1920
+\end_layout
+
+\end_inset
+
+However, in the case of Joseph Stalin, it was not only others that he was
+ channelling into a false dichotomy in his mind.
+ He 
+\begin_inset Quotes eld
+\end_inset
+
+refused to accept any blame for the economic chaos or the famine.
+ The 'last remnants of the moribund classes', [...] were actively sabotaging
+ the building of socialism
+\begin_inset Quotes erd
+\end_inset
+
+.
+ 
+\begin_inset Foot
+status collapsed
+
+\begin_layout Plain Layout
+Ronald G.
+ Suny, 
+\begin_inset Quotes eld
+\end_inset
+
+Stalin and his Stalinism: Power and Authority in the Soviet Union, 1930-1953
+\begin_inset Quotes erd
+\end_inset
+
+ in D.
+ Hoffmann ed., 
+\emph on
+Stalinism 
+\emph default
+(Blackwell Publishing, 2003), p.21.
+\end_layout
+
+\end_inset
+
+ It is evident that Stalin viewed himself as the hero of the story, whether
+ he remained deserving of that title or not.
+ 
+\end_layout
+
+\begin_layout Standard
+We are next introduced to the two Cossack powers in the region of Khevi,
+ Diambeg and Girgola.
+ That the are Cossacks means that they have been sent in from the south
+ of Russia to continue the occupation of Georgia.
+ 
+\emph on
+The Patricide
+\emph default
+ takes place during the Caucasian War, which ended some thirty years before
+ Stalin would read of it.
+ During this time, Russia sought to expand south through the Caucasus, first
+ through brutal military assault, and later through continual occupation
+ of military forces.
+ The Russians also introduced their own Governors, removing any election
+ by the people of the region.
+ Unsurprisingly, these intruders were disliked by all.
+\begin_inset Foot
+status collapsed
+
+\begin_layout Plain Layout
+Thomas de Waal, 
+\emph on
+The Caucasus : an introduction
+\emph default
+ (New York : Oxford University Press, 2010)
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Throughout the story, Cossacks are crude, self-important, and power hungry,
+ doing whatever they need to get their way.
+ However, Girgola and Diambeg are the military leaders, and they can truly
+ cause havoc in the lives of the good and noble Georgians.
+ As the two men discuss, while considering the high loss of life in a poorly
+ organized search mission, 
+\begin_inset Quotes eld
+\end_inset
+
+Cossacks can replace other Cossacks, - there is no lack in the stations.
+\begin_inset Quotes erd
+\end_inset
+
+ 
+\begin_inset Foot
+status collapsed
+
+\begin_layout Plain Layout
+Kazbegi, p.62.
+\end_layout
+
+\end_inset
+
+
+\begin_inset VSpace defskip
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+At the beginning, Diambeg was a captain of the Cossack guard.
+ While in this position, he locked Glaha away in order to attempt to woo
+ Nunu's mother.
+ When this was unsuccessful he rapes her, and Glaha swears vengeance on
+ Diambeg.
+ This is the first instance of a vow of vengeance in this story; the tangible
+ result of a strong moral system, a Georgian who swears to get revenge will
+ do so or die trying.
+ Once Diambeg was moved up to the position of Governor, Glaha realized the
+ futility of his vow.
+ He hides away in shame, in cowardice, for failing to live up to his words.
+ 
+\end_layout
+
+\begin_layout Standard
+Girgola is the current Cossack captain serving under Diambeg, and he is
+ no better.
+ It is very surprising to the aunt and uncle of Nunu when it is Girgola
+ who shows up to ask for her hand in marriage, as he already has a wife
+ (who he is known to beat regularly).
+ Girgola claims unconvincingly that Nunu would be married to his brother,
+ and the deal is made.
+ The ransom is exchanged at once, to secure the deal.
+ 
+\begin_inset Foot
+status collapsed
+
+\begin_layout Plain Layout
+\begin_inset Quotes eld
+\end_inset
+
+Traditional Russian Wedding
+\begin_inset Quotes erd
+\end_inset
+
+ (http://masterrussian.com/russianculture/russian_wedding.htm) In a traditional
+ wedding, the parents of the bride pretend to steal the bride, and demand
+ a ransom of the groom.
+ 
+\end_layout
+
+\end_inset
+
+ While Nunu is despairing, her love Iago is accosted by Diambeg, Girgola,
+ and other Cossacks.
+ Girgola plants the idea into everyone's head that Iago is a wanted caravan
+ robber, and they lock him away.
+ He does not confess to the crime, and Girgola shouts 
+\begin_inset Quotes eld
+\end_inset
+
+I'll make you confess! I'll cripple you!
+\begin_inset Quotes erd
+\end_inset
+
+ while beating him bloody.
+ 
+\begin_inset Foot
+status collapsed
+
+\begin_layout Plain Layout
+Kazbegi, p.20.
+\end_layout
+
+\end_inset
+
+
+\begin_inset VSpace defskip
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+I find it quite reasonable that Joseph Dzhugashvili, frequently abused as
+ a boy, would find Diambeg and Girgola's technique of beating their prisoners
+ as loathsome as any other reader would.
+ I don't, however, understand how a man who would take that position could
+ go on to use many of the same methods on his own prisoners.
+ As Miklos Kun brings to light with a very clear sketch of 
+\begin_inset Quotes eld
+\end_inset
+
+the fate the one-time seminarist had in store for Bryukhanov,
+\begin_inset Quotes erd
+\end_inset
+
+ Stalin had no qualms with creating his own mechanisms for torture.
+\begin_inset Foot
+status collapsed
+
+\begin_layout Plain Layout
+Miklos Kun 
+\emph on
+Stalin: An Unknown Portrait 
+\emph default
+(Budapest: Central European University Press, 2003) p.27: Illustration of
+ a man suspended from a pulley, by something impaled in his anus, drawn
+ by J.
+ Stalin in 1931.
+\end_layout
+
+\end_inset
+
+ He did not simply demand that answers be acquired, or men be punished;
+ Stalin invented particular ways of tormenting his personal enemies.
+ 
+\end_layout
+
+\begin_layout Standard
+Once Nunu has discovered that Iago had vanished, she refused to marry Girgola's
+ brother and began threatening to kill herself.
+ Weeks later, Nunu was been talking with her friend Marina in the forest,
+ when Girgola and his men jumped out with the intent to kidnap her.
+ Marina threw down her headscarf,
+\begin_inset Foot
+status collapsed
+
+\begin_layout Plain Layout
+\begin_inset Quotes eld
+\end_inset
+
+The Georgian Abkhaz Conflict
+\begin_inset Quotes erd
+\end_inset
+
+ (http://www.circassianworld.com/Georgian-Abkhaz_Conflict.html) There is an
+ ancient Georgian custom according to which a woman could oblige two fighting
+ men to desist by throwing her white headscarf on the ground between them.
+\end_layout
+
+\end_inset
+
+ and Girgola laughed in her face at the idea that he would have any reason
+ to honor her mountain traditions.
+\begin_inset Foot
+status collapsed
+
+\begin_layout Plain Layout
+p30 pat
+\end_layout
+
+\end_inset
+
+ At long last Marina's love, Koba, leaps out to save the day.
+ He wrestles himself between Marina and Girgola's men, but Girgola manages
+ to ride off with Nunu.
+ Koba calls out after him, that 
+\begin_inset Quotes eld
+\end_inset
+
+before he grows a mustache on his upper lip
+\begin_inset Quotes erd
+\end_inset
+
+ Girgola will pay for this.
+\begin_inset Foot
+status collapsed
+
+\begin_layout Plain Layout
+Kazbegi, p.31.
+\end_layout
+
+\end_inset
+
+
+\begin_inset VSpace defskip
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+In this ending to Part 1, we see a very stark contrast between the unfeeling,
+ crass Cossacks, who abuse anyone who gets in their way, to the traditional,
+ honorable people of the Caucasus.
+ The Georgians had very strong convictions about holding to your word, and
+ maintaining a certain level of respectability.
+ Women covered their heads with scarves in a reverent way; several times
+ an expression regarding 
+\begin_inset Quotes eld
+\end_inset
+
+not having removed one's headscarf
+\begin_inset Quotes erd
+\end_inset
+
+ is used to express that a woman still has a conscience.
+ If her head is still covered, she is still respectable, and can be trusted.
+\begin_inset Foot
+status collapsed
+
+\begin_layout Plain Layout
+Kazbegi p.52.
+\end_layout
+
+\end_inset
+
+ Even the abreks, savage mountain men like Koba, had a code of chivalry
+ and honor that could not be broken.
+ An abrek was fearless in a fight, honored his vows, and isolated from his
+ home, family, and friends; he was a professional robber of the mountains,
+ concerned by nothing but his code of honor.
+\begin_inset Foot
+status collapsed
+
+\begin_layout Plain Layout
+Rebecca Gould 
+\begin_inset Quotes eld
+\end_inset
+
+The Abrek in Chechen Folklore
+\begin_inset Quotes erd
+\end_inset
+
+ 
+\emph on
+Journal of the International Caucasological Research Institute 14/15
+\emph default
+ (2006): 37-46.
+\end_layout
+
+\end_inset
+
+ 
+\end_layout
+
+\begin_layout Section*
+The Abrek
+\end_layout
+
+\begin_layout Quotation
+\begin_inset Quotes eld
+\end_inset
+
+Caution, secretiveness, taciturnity are the marks of the abrek or mountain
+ chief, half brigand, half warrior, who is honored above all other men.
+ The blood feud is still the law of the land.
+ There are those who see in Stalin an abrek who has expanded his sway beyond
+ his native mountains.
+ That he did not do this extravagantly on horseback, but craftily by intrigue,
+ is definitely in the tradition of the abrek.
+\begin_inset Quotes erd
+\end_inset
+
+
+\begin_inset Foot
+status collapsed
+
+\begin_layout Plain Layout
+E.
+ Lyons, 
+\emph on
+Stalin: Czar of all the Russians
+\emph default
+ (Philadelphia: JB Lippincott Company, 1940) p.56.
+\end_layout
+
+\end_inset
+
+ 
+\end_layout
+
+\begin_layout Standard
+The abrek was portrayed by Kazbegi as a Robin Hood character, stealing from
+ the rich and giving to the needy -- in this case the Chechen militants,
+ who were holding their ground.
+ Abreks historically went on to battle the Russian occupants in harsh guerrilla
+ warfare during the Caucasian War, later attaining a sort of 
+\begin_inset Quotes eld
+\end_inset
+
+aloof mythical savior
+\begin_inset Quotes erd
+\end_inset
+
+ status.
+ In some ways, the traditional abrek was more akin to Stalin than was his
+ beloved Koba in particular.
+ Koba simply happens upon, towards the end of the storyline, the Chechen
+ rebels, whereas the mythical abrek character has been devoted to the cause
+ from the start.
+ While abreks were traditionally no more aligned with their friends than
+ their foes, in the war they did choose a side: the side of the oppressed
+ peasant class.
+ Iremashvili claimed that 
+\begin_inset Quotes eld
+\end_inset
+
+what impressed [him] and Soso were the works of Georgian literature which
+ glorified the Georgian's struggle for freedom.
+\begin_inset Quotes erd
+\end_inset
+
+
+\begin_inset Foot
+status collapsed
+
+\begin_layout Plain Layout
+Montefiore, p.63.
+\end_layout
+
+\end_inset
+
+ This, however visible, was a side-plot in the story.
+ It is not even evident until Part 3.
+ While the character of Koba clearly struct a chord with young Joseph, the
+ context in which the novel existed probably had a lot more to do with his
+ devotion to the abrek lifestyle than did the text of Kazbegi's novel itself.
+ 
+\end_layout
+
+\begin_layout Standard
+Stalin's emotional detachment could very easily be likened to that of the
+ abreks.
+ A fellow prisoner describes Stalin as "completely imperturbable
+\begin_inset Quotes erd
+\end_inset
+
+, having never seen him 
+\begin_inset Quotes eld
+\end_inset
+
+get agitated, lose control, get angry, shout, swear or -- in short -- reveal
+ himself in any other aspect than complete calmness.
+\begin_inset Quotes erd
+\end_inset
+
+
+\begin_inset Foot
+status collapsed
+
+\begin_layout Plain Layout
+Service, p.53.
+\end_layout
+
+\end_inset
+
+ Likewise Koba, who is described as 
+\begin_inset Quotes eld
+\end_inset
+
+Marina's beloved
+\begin_inset Quotes erd
+\end_inset
+
+, does not even notice when she faints during the skirmish in the woods.
+ He does not dote on her, but instead runs off to save Iago and hunt Girgola.
+ Does he ever see her again? We don't know.
+ Marina is only in the story to relay details of Iago's arrest to Koba,
+ and to bring Nunu into the woods.
+ Other than that, she serves no purpose in the story, especially as far
+ as Koba is concerned.
+ 
+\end_layout
+
+\begin_layout Standard
+When Stalin annotated Lenin's 
+\emph on
+Materialism and Empiriocriticism
+\emph default
+, he made a list of qualities which could be used to label a person good
+ or bad.
+ To be good 
+\begin_inset Quotes eld
+\end_inset
+
+regardless of any other 'vices'
+\begin_inset Quotes erd
+\end_inset
+
+, a person must be 
+\begin_inset Quotes eld
+\end_inset
+
+strong (spiritually), active, and intelligent (capable).
+ However, 
+\begin_inset Quotes eld
+\end_inset
+
+weakness, laziness, and stupidity are the only things that can be called
+ vices.
+\begin_inset Quotes erd
+\end_inset
+
+
+\begin_inset Foot
+status collapsed
+
+\begin_layout Plain Layout
+Service, p.341.
+\end_layout
+
+\end_inset
+
+ Each of these good traits falls exactly into the category of the abreks;
+ Koba in particular is brave beyond reason, the fastest and most capable
+ in a battle, and able to escape from the most dire of situations/discern
+ matters not immediately obvious.
+ Each of the bad can be used to describe the Cossacks.
+\end_layout
+
+\begin_layout Standard
+By the end of Part 1, most of the major themes of the story are unveiled;
+ the next two points will serve mainly to reinforce them.
+\end_layout
+
+\begin_layout Section*
+Part 2
+\end_layout
+
+\begin_layout Standard
+Koba gathers a gang of abreks together, and they break Iago out of prison,
+ killing several guards in the process.
+ This is abstracted away as 
+\begin_inset Quotes eld
+\end_inset
+
+serving a greater purpose
+\begin_inset Quotes erd
+\end_inset
+
+, and none of them thinks twice about it.
+ The group is pursued by other guards, and Iago -- weakened by torture --
+ falls down in a faint.
+ Koba doesn't even consider abandoning him for their own safety; to do so
+ would be to betray a brother.
+ When they manage to get away, Iago is weakened, and they must stop to rest.
+\end_layout
+
+\begin_layout Standard
+Nunu is held hostage in a mountain fortress, by Girgola (and his brother,
+ who does nothing but feel sorry for Nunu, and gets sent away).
+ During a large storm, Girgola gives up on trying to convince her, and goes
+ to rape her.
+ Nunu runs to the other room, and tries to commit suicide.
+ She is still resting, weakened from the attempt when Girgola hears that
+ Iago has escaped.
+ He runs off in search of Iago, leaving Nunu in the hands of his godmother.
+\begin_inset VSpace defskip
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+The idea of brotherhood is expressed very strongly in 
+\emph on
+The Patricide
+\emph default
+.
+ Koba and Iago are known to be 
+\begin_inset Quotes eld
+\end_inset
+
+blood brothers
+\begin_inset Quotes erd
+\end_inset
+
+, and we observe several other men join in their clan, including Torgva
+ (one of Koba's men), and Parch (a hunter, from whom Koba asks help).
+ The tradition of joining as blood brothers is very particular; it involves
+ exchanging bullets, hugging three times, and kissing three times.
+ When a man has become your blood brother, you may never foresake him; he
+ has become at least as important to you as your own brother.
+ You are able to rest assured that your blood brother would die before betraying
+ you, and Koba is wary of old friends who are not his blood brother, when
+ Iago is in hiding.
+ 
+\end_layout
+
+\begin_layout Standard
+Unlike Koba and the typical abrek, Stalin would never experience any camaraderie
+ of note.
+ The men that were closest to him were under more scrutiny than any others,
+ and at greatest threat of execution.
+ This is in part because any men close to him were likely to be contenders
+ for his seat of power.
+ Once it seemed as though his control was at risk, Stalin did anything necessary
+ to ensure their fall from grace was sufficiently damning.
+ The list scarcely needs mentioning, but includes Trotsky (murdered), Bukharin
+ (executed), Zinoviev (executed), Kamenev (executed), Pyatakov (executed),
+ Kirov (executed), and Rykov (executed), to list every man but Lenin listed
+ in the first section (The Context) of McCauley's book, 
+\emph on
+Stalin and Stalinism
+\emph default
+.
+\begin_inset Foot
+status collapsed
+
+\begin_layout Plain Layout
+Martin McCauley, 
+\emph on
+Stalin and Stalinism 
+\emph default
+(London: Pearson Longman, 2008) p.1-35.
+\end_layout
+
+\end_inset
+
+ 
+\begin_inset VSpace defskip
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Girgola immediately sets off to harass the villagers and shepherds into
+ informing on Iago.
+ He gains no information, and by breaking the guest/host customs of the
+ region
+\begin_inset Foot
+status collapsed
+
+\begin_layout Plain Layout
+In the mountains, there is a custom of wishing to have his case comes to
+ the shepherds and asks for help.
+ Shepherds to give him a few head of sheep from his flock.
+ This is called a flock ochhari knocking together.
+ (Note by the author).
+\end_layout
+
+\end_inset
+
+ only manages to lose the lives of several of his men, and gain the wrath
+ of the countrymen.
+ He can no longer manage to convince any of the men in the countryside to
+ help him; only Cossacks will serve him loyally.
+ He describes this to Diambeg, by saying that 
+\begin_inset Quotes eld
+\end_inset
+
+our people [are] dog people
+\begin_inset Quotes erd
+\end_inset
+
+.
+\begin_inset Foot
+status collapsed
+
+\begin_layout Plain Layout
+Kazbegi, p.61.
+\end_layout
+
+\end_inset
+
+ 
+\end_layout
+
+\begin_layout Standard
+Nunu is being guarded by Girgola's godmother, who at first believes that
+ she is a dishonorable wife.
+ 
+\begin_inset Quotes eld
+\end_inset
+
+One who betrays her husband, in the mountains, is worthy of all cruel punishment
+s imaginable
+\begin_inset Quotes erd
+\end_inset
+
+.
+\begin_inset Foot
+status collapsed
+
+\begin_layout Plain Layout
+Kazbegi, p.63.
+\end_layout
+
+\end_inset
+
+ She soon feels 
+\begin_inset Quotes eld
+\end_inset
+
+a woman's sympathies
+\begin_inset Quotes erd
+\end_inset
+
+ towards Nunu, and becomes so kind to her, that when she happens across
+ Koba outdoors, she offers to bring him up to visit Nunu.
+ Nunu sees the woman bringing up a shadowed man, and panics about Girgola's
+ return.
+ She flees out the doorway, and runs across to safety...where she is rescued
+ from a bear by Iago.
+ Koba and the woman are left to assume that she has killed herself, and
+ report as much to Girgola.
+ 
+\end_layout
+
+\begin_layout Standard
+During this discussion between Koba and the woman, Darejan, Koba is struck
+ by how ludacris the situation has become.
+ While police officials scour the countryside in search of a murderer in
+ an attempt to dole out justice, a simple woman is begging protection from
+ those very men...from that very murderer! 
+\begin_inset VSpace defskip
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Once again we have an exemplification of the corrupt upper class oppressing
+ the peasant class.
+ Even this man, who one could label a cruel killer, is not at fault, because
+ his acts were a direct result of his enemies' actions.
+ This is, in my opinion, the first of two passages that Stalin repeatedly
+ referred to in his moral justification.
+ This passage installs a framework, under which any action is permissible,
+ as long as one is working for a good cause.
+ The cause of ending social class distinction is the one that is featured
+ both here in the novel, as well as throughout Stalin's Russia.
+ If Koba was not wrong to act as he did, how could Stalin be at fault either?
+\end_layout
+
+\begin_layout Standard
+\begin_inset VSpace defskip
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+While Koba is out gathering other bands of mountain men to his cause, Iago
+ and Nunu are attacked.
+ All of them come back to defend the weak duo from Girgola's men, but Iago
+ is bleeding heavily at the end of the fight.
+ Once again Nunu is carried off and imprisoned by Girgola.
+ This time she is locked in his house, with no food and water for days.
+ His manservant breaks her out and hides Nunu away with his wife.
+\end_layout
+
+\begin_layout Section*
+Part 3
+\end_layout
+
+\begin_layout Standard
+Koba and Iago are being protected by the hunters' village, but they are
+ both desperate for news of Nunu.
+ While hunting in the woods, Koba runs into Girgola's manservant, who recognizes
+ him and brings him to visit Nunu.
+ The men decide to smuggle Nunu to the town of Dzaug, where her father can
+ hide her away until they bring Iago out to find her.
+ However, Koba believes it to be impossible to fight through the ring of
+ guards surrounding their current hiding place.
+ The manservant explains that sometimes cunning is more effective than brute
+ force, and they make plans to smuggle Nunu out under a cartful of hay.
+\end_layout
+
+\begin_layout Standard
+During this conversation, an old acquaintance of Koba's (Vep'hiya) visits,
+ bringing news of the Chechen militia.
+ He joins Koba's brigand, and brings them in contact with the 
+\begin_inset Quotes eld
+\end_inset
+
+rebel
+\begin_inset Quotes erd
+\end_inset
+
+ forces gathering in the forest, who are currently organizing raids to collect
+ funds and goods.
+\end_layout
+
+\begin_layout Standard
+\begin_inset VSpace defskip
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+One notable scene while hunting involves two deer battling, knocking their
+ antlers together.
+ Koba is fascinated by the honor with which the deer wait the proper amount
+ of time before striking again; that one could kill the other easily by
+ striking early, yet this never happens, impresses upon him the nobility
+ of the animal kingdom.
+ This could be read as a metaphor for the nobility of the lower classes
+ as well.
+ It would not be a stretch to say that those who worked the earth are closer
+ to nature, and that Kazbegi meant to directly remind the reader of the
+ honor of the mountain folk in the Caucasus.
+ It is the men who have simple lives who are most unfettered by the sins
+ of the rich and powerful.
+ It is certainly possible to read this as yet another strike against the
+ upper class.
+\end_layout
+
+\begin_layout Standard
+It is not until Vep'hiya arrives that Koba and Iago, or even the reader,
+ are fully aware of the happenings in the rest of the Caucasus, surrounding
+ the Khevi region.
+ Suddenly the small struggle between our characters, good and evil, is mapped
+ onto the greater scale.
+ The Cossacks have always been Russian, and the abreks have always been
+ Georgian, but it is now clear that a larger, more important battle is at
+ hand.
+ 
+\end_layout
+
+\begin_layout Standard
+As Stalin was a Georgian, raised in the aftermath of the Caucasian War,
+ he felt the full force of nationalism upon him in his childhood.
+ He and his friends smuggled in Georgian nationalist books and poetry to
+ the seminary (such as 
+\emph on
+The Patricide
+\emph default
+), and Stalin even wrote his own nationalist poetry under a pseudonym.
+\begin_inset Foot
+status collapsed
+
+\begin_layout Plain Layout
+Service, p.39.
+\end_layout
+
+\end_inset
+
+ He even led his own version of the raids mentioned in the novel, in order
+ to collect for the rising Bolshevik party, on behalf of Georgia.
+\begin_inset Foot
+status collapsed
+
+\begin_layout Plain Layout
+Service, p.75.
+\end_layout
+
+\end_inset
+
+ Although it was known that Stalin supported Marxism on a wide scale in
+ the USSR, Lenin was concerned that he favored Georgia above other Soviet
+ states for many years.
+\begin_inset Foot
+status collapsed
+
+\begin_layout Plain Layout
+Service, p.97.
+\end_layout
+
+\end_inset
+
+ He did, in fact, continue to promote actions which would cause Georgia
+ to fall under his axiomatic definition of a nation, described in 
+\emph on
+Marxism and the National Question
+\emph default
+.
+ That is, he encouraged the printing of Georgian literary classics, while
+ his definition of nationhood requires a vigorous press and literature.
+ In contrast to Ukraine and Belorussia, where he crushed new literature
+ and culture, it is clear that Stalin was a Georgian nationalist even through
+ the 1930s.
+\begin_inset Foot
+status collapsed
+
+\begin_layout Plain Layout
+Service, p.328.
+\end_layout
+
+\end_inset
+
+ 
+\end_layout
+
+\begin_layout Standard
+\begin_inset VSpace defskip
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Nunu reconnects with her father, and remains hidden away.
+ When Koba and Iago come to find her, only Koba is able to discern Glaha's
+ identity.
+ He returns with the good news, and the group makes plans to reconnect.
+ There is a curfew each night, imposed by the Cossacks, so Koba's group
+ is crawling under a bridge when they overhear their host telling some Cossack
+ troops that he has found Koba and Iago.
+ The news quickly gets back to Girgola.
+ He is at first gleeful, that he has finally captured the rebels.
+ The next moment, he hears news that Nunu is in town as well.
+ Girgola had been informed that she was dead, so he was shocked.
+ While it is one thing to give up on your tortured love because she is in
+ ruins at the bottom of a river, it is quite another to be ridiculed again
+ as she is stolen away by Iago, to live happily ever after.
+ Girgola is filled with 
+\begin_inset Quotes eld
+\end_inset
+
+feral rage
+\begin_inset Quotes erd
+\end_inset
+
+.
+\begin_inset Foot
+status collapsed
+
+\begin_layout Plain Layout
+Kazbegi, p.79.
+\end_layout
+
+\end_inset
+
+ 
+\end_layout
+
+\begin_layout Standard
+Girgola gathers his men to burn Iago and his group out of the building they
+ are locked into.
+ They are fired upon, and then the building is surrounded by hay and set
+ aflame, killing everyone inside.
+ Everyone, that is, except for Koba.
+ As the town is watching the fire, a man arrives to report a murder of the
+ old beggar, Glaha.
+ The only suspect, Girgola declares, is Nunu.
+ He holds a show trial, where she is banished to a life of hard labor in
+ Siberia.
+ She swears to God that she is innocent, and the townspeople are confused.
+\end_layout
+
+\begin_layout Standard
+As Diambeg and Girgola ride back home the next day, Girgola is haunted by
+ the pained face of Nunu.
+ All of a sudden each is shot off of his horse.
+ A shout rang out, as Koba approached on horseback, proudly proclaiming
+ his presence.
+ Diambeg died instantly, but Girgola had enough time to call for a priest.
+ With his dying breath, he begs forgiveness for framing Nunu with Patricide.
+\begin_inset Foot
+status collapsed
+
+\begin_layout Plain Layout
+Kazbegi, p.83.
+\end_layout
+
+\end_inset
+
+
+\begin_inset VSpace defskip
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+The second passage, that is most likely to have been influential on young
+ Joseph, is this last page.
+ The direct comparisons of torture, killing the innocent with the enemies,
+ and show trials are ironic, but I find it unlikely that he considered them
+ worth mentioning.
+ The line of import is that which is uttered by Koba, as he triumphantly
+ brings down the enemy of the people.
+ The line which proclaims his oath of vengeance a success: Это я, Коба!
+ За жизнь Иаго вы расплачиваетесь!
+\begin_inset Foot
+status collapsed
+
+\begin_layout Plain Layout
+It's me, Koba! You are paying for the life of Iago!
+\end_layout
+
+\end_inset
+
+ 
+\end_layout
+
+\begin_layout Standard
+
+\end_layout
+
+\end_body
+\end_document

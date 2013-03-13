@@ -1,0 +1,16 @@
+//**********************//
+//  Amber Vicki Crosson //
+//  91.102              //
+//  Exercize 10         //
+//  linked_list.h       //
+//  3-1-13              //
+//**********************//
+
+#ifndef LINKED_LIST_H
+#define LINKED_LIST_H
+
+#include <globals.h>
+
+
+
+#endif //LINKED_LIST_H

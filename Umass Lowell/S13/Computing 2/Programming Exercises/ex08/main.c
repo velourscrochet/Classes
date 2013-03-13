@@ -1,0 +1,186 @@
+//**********************//
+//  Amber Vicki Crosson //
+//  91.102              //
+//  Exercize 8          //
+//  2-21-13             //
+//  main.c              //
+//**********************//
+
+#include "array.h"
+#include "int_array.h"
+#include "array_utils.h"
+
+void destroy_int(int * * p)
+{
+    free(*p);
+    *p = NULL;
+}
+
+int cmp_int(int * p1, int * p2)
+{   
+    return *p1 - *p2;
+}
+
+status init_array_descending_order(array * const a)
+{
+    for (size_t i=0, size = array_size(a); i != size; ++i)
+    {
+        if(set_int(a, i, size - (i+1)) == ERROR)
+            return ERROR;
+    }
+    return OK;
+}
+
+status sum_int(int * the_sum, int * p)
+{
+    *the_sum += *p;
+    return OK;
+}
+
+status array_sum(array * const a,
+                int * const the_sum)
+{
+    int temp = 0;
+    if (traverse_array(a, &temp, sum_int) == ERROR)
+        return EXIT_FAILURE;
+
+    *the_sum = temp;
+    return OK;
+}
+
+status init_array_ascending_order(array * const a)
+{
+    for(size_t i=0, size = array_size(a); i != size; ++i)
+    {
+        if (set_int(a, i, i) == ERROR) 
+            return ERROR;
+    }
+    return OK;
+}
+
+status test_sort (array * const a)
+{
+    array * s;
+
+    //s is initialized in ascending order so it is not == a
+    if (init_array(&s, array_size(a)) == ERROR ||
+        init_array_ascending_order(s) == ERROR ||
+        cmp_array(a, s, cmp_int) == 0)
+        return ERROR;
+
+    //a is sorted successfully and == s
+    if(sort_array(a, cmp_int) == ERROR ||
+        cmp_array(a, s, cmp_int) != 0)
+        return ERROR;
+
+    //s is destroyed
+    destroy_array(&s, destroy_int);
+
+    return OK;
+}
+
+status test_min(array * const a)
+{
+    //The index of the minimum element is 2
+    size_t min_index;
+    {
+        if (min_array_element(a,0,array_size(a),&min_index,cmp_int) == ERROR||
+            min_index != 2)
+            { return ERROR; }
+    }
+
+    //Finding the minimum element in an empty array yields an ERROR
+    {
+        size_t min_index;
+        if (min_array_element(a,0,0, &min_index, cmp_int) == OK)
+            return ERROR;
+    }
+
+    return OK;
+}
+
+
+status test_swap(array * const a)
+{
+    array * other;
+
+    // The test doesn't work if the array is too small
+    if (array_size(a)<=1)
+        return ERROR;
+
+    //other is equal to a
+    if (init_array (&other ,array_size ( a )) == ERROR ||
+        init_array_descending_order ( other ) == ERROR ||
+        cmp_array ( a , other , cmp_int ) != 0) 
+        return ERROR; 
+
+    //after swapping the two arrays are different
+    if (swap_array_elements (other,0,array_size(other)-1) == ERROR ||
+        cmp_array(a,other,cmp_int) == 0)
+        return ERROR;
+
+    //after swapping again two arrays are the same
+    if (swap_array_elements(other, 0, array_size(other) - 1) == ERROR ||
+        cmp_array(a,other,cmp_int) != 0)
+        return ERROR;
+
+    //after swapping an index with itself the two arrays are the same
+    if (swap_array_elements(other,1,1) == ERROR ||
+        cmp_array(a,other,cmp_int) != 0)
+        return ERROR;
+
+    destroy_array(&other, destroy_int);
+
+    return OK;
+}
+
+
+
+
+
+
+int main(int argc, char **argv)
+{
+    size_t const a_size = 3;
+    array * a;
+
+    /* the array is initialized successfully */
+    if (init_array(&a, a_size) == ERROR)
+        return EXIT_FAILURE;
+
+    /*the elements of the array are initialized successfully? */
+    if (init_array_descending_order(a) == ERROR)
+        return EXIT_FAILURE;
+
+    /*The sum of the elements of the array is computed successfully*/
+    {
+        int the_sum = 0;
+        if (array_sum(a, &the_sum) == ERROR)
+            return EXIT_FAILURE;
+
+        if (the_sum != 3)
+            return EXIT_FAILURE;
+    }
+
+    // The array is equal to itself?
+    if (cmp_array(a, a, cmp_int) != 0)
+        return EXIT_FAILURE;
+
+    if (test_min(a) == ERROR)
+        return EXIT_FAILURE;
+
+    if (test_swap(a) == ERROR)
+        return EXIT_FAILURE;
+
+    if (test_sort(a) == ERROR)
+        return EXIT_FAILURE;
+
+
+
+    destroy_array(&a, destroy_int);
+    if (a != NULL)
+        return EXIT_FAILURE;
+
+    return EXIT_SUCCESS;
+}
+

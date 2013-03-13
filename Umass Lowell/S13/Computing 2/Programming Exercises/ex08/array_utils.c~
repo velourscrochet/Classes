@@ -1,0 +1,127 @@
+//**********************//
+//  Amber Vicki Crosson //
+//  91.102              //
+//  Exercize 8          //
+//  2-21-13             //
+//  array_utils.c       //
+//**********************//
+
+#include "globals.h"
+#include "array.h"
+#include "array_utils.h"
+#include "int_array.h"
+
+status traverse_array(array * const a,
+                    info_ptr const info,
+                    status (*p_func_f)())
+{
+    for (size_t i=0, size = array_size(a); i != size; ++i)
+    {
+        generic_ptr p = void*;
+        if ((*p_func_f)(info, p) == ERROR)
+            return ERROR;
+    }
+
+    return OK;
+}
+
+status cmp_array(array * const a_1,
+                array * const a_2,
+                int (*p_cmp_f)())
+{
+    int cmp_result = 0;
+    size_t size_1 = array_size(a_1),
+            size_2 = array_size(a_2);
+
+    for (size_t i=0;
+        i != size_1 && i != size_2 && cmp_result == 0;
+        ++i)
+    {
+        generic_ptr p1, p2;
+        if (get(a_1, i, &p1) == ERROR ||
+            get(a_2, i, &p2) == ERROR)
+        { return ERROR; }
+        
+        cmp_result = (*p_cmp_f)(p1, p2);
+    }
+    return cmp_result == 0 ?
+            size_1 - size_2 :
+            cmp_result;
+}
+
+static status min_array_element_internal(array * const a,
+                                        size_t const start,
+                                        size_t const end,
+                                        size_t * const min_index,
+                                        int (*p_cmp_f)())
+{
+    if (start == end)
+        return OK;
+    else
+    {
+        generic_ptr p_start, p_min;
+        if (get (a, start, &p_start) == ERROR ||
+            get(a, *min_index, &p_min) == ERROR)
+            { return ERROR; }
+
+        if ((*p_cmp_f)(p_start, p_min) < 0 )
+            *min_index = start;
+        return min_array_element_internal(a, start + 1, end, min_index, p_cmp_f);
+    }
+}
+
+status min_array_element(array * const a,
+                        size_t const start,
+                        size_t const end,
+                        size_t * const min_index,
+                        int (*p_cmp_f)())
+{
+    if (start == end)
+        return ERROR;
+    else
+    {
+        *min_index = start;
+        return min_array_element_internal(a, start+1, end, min_index, p_cmp_f);
+    }
+}
+
+status swap_array_elements(array * const a,
+                            size_t const i_1,
+                            size_t const i_2)
+{
+    generic_ptr p_1, p_2;
+    if (get(a, i_1, &p_1) == ERROR ||
+        get(a, i_2, &p_2) == ERROR)
+        { return ERROR; }
+    if (set (a, i_1, p_2) == ERROR ||
+        set (a, i_2, p_1) == ERROR)
+        return ERROR;
+
+    return OK;
+}
+
+static status selection_sort(array * const a,
+                            size_t const start,
+                            size_t const end,
+                            int (*p_cmp_f)())
+{
+    if (start == end)
+        return OK;
+    else
+    {
+        size_t min_index;
+        if (min_array_element(a, start, end, &min_index, p_cmp_f) == ERROR)
+            return ERROR;
+
+        swap_array_elements(a, min_index, start);
+        return selection_sort(a, start + 1, end, p_cmp_f);
+    }
+}
+
+status sort_array(array * const a,
+                int (*p_cmp_f)())
+{
+    return selection_sort(a,0,array_size(a),p_cmp_f);
+}
+
+
