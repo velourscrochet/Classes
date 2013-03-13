@@ -1,0 +1,34 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN" "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
+<head>
+
+<title>An error has occurred.</title>
+
+<meta name="title" content="An error has occurred." />
+<meta name="copyright" content="&copy; 2004 President and Fellows of Harvard University" />
+<meta name="author" content="Ethan Marcotte, sidesh0w.com" />
+
+<meta name="robots" content="noindex, nofollow" />
+<meta name="MSSmartTagsPreventParsing" content="true" />
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+
+<link rel="stylesheet" href="http://isites.harvard.edu/core.css" media="screen" />
+
+</head>
+
+<body>
+
+<div id="main-wrap">
+
+	<div id="content">
+		<div id="error-content">
+			<h1>An error has occurred.</h1>
+			
+			<p>The system is unable to find the specified path. The file you are looking for may not exist .</p>
+		</div>
+	</div>
+</div>
+
+</body>
+</html>

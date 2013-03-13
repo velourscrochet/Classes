@@ -1,0 +1,282 @@
+#LyX 2.0 created this file. For more info see http://www.lyx.org/
+\lyxformat 413
+\begin_document
+\begin_header
+\textclass article
+\use_default_options true
+\maintain_unincluded_children false
+\language english
+\language_package default
+\inputencoding auto
+\fontencoding global
+\font_roman default
+\font_sans default
+\font_typewriter default
+\font_default_family default
+\use_non_tex_fonts false
+\font_sc false
+\font_osf false
+\font_sf_scale 100
+\font_tt_scale 100
+
+\graphics default
+\default_output_format default
+\output_sync 0
+\bibtex_command default
+\index_command default
+\paperfontsize default
+\use_hyperref false
+\papersize default
+\use_geometry false
+\use_amsmath 1
+\use_esint 1
+\use_mhchem 1
+\use_mathdots 1
+\cite_engine basic
+\use_bibtopic false
+\use_indices false
+\paperorientation portrait
+\suppress_date false
+\use_refstyle 1
+\index Index
+\shortcut idx
+\color #008000
+\end_index
+\secnumdepth 3
+\tocdepth 3
+\paragraph_separation indent
+\paragraph_indentation default
+\quotes_language english
+\papercolumns 1
+\papersides 1
+\paperpagestyle default
+\tracking_changes false
+\output_changes false
+\html_math_output 0
+\html_css_as_file 0
+\html_be_strict false
+\end_header
+
+\begin_body
+
+\begin_layout Subsection*
+Problem 6:
+\end_layout
+
+\begin_layout Standard
+Prove that f and g are inverse functions: 
+\begin_inset Formula $f(x)=5x+1$
+\end_inset
+
+, 
+\begin_inset Formula $g(x)=\frac{x-1}{5}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $f(g(x))=5\left(\frac{x-1}{5}\right)+1$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $f(g(x))=x-1+1$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $f(g(x))=x$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $g(f(x))=\frac{(5x-1)+1}{5}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $g(f(x))=\frac{5x-1+1}{5}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $g(f(x))=\frac{5x}{5}=x$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $\therefore g(x)$
+\end_inset
+
+ and 
+\begin_inset Formula $f(x)$
+\end_inset
+
+ are inverse functions
+\end_layout
+
+\begin_layout Subsection*
+Problem 44:
+\end_layout
+
+\begin_layout Standard
+Determine whether the function is monotonic: 
+\begin_inset Formula $f(x)=(x+a)^{3}+b$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $f^{\prime}(x)=3(x+a)^{2}\geq0$
+\end_inset
+
+ for all values of 
+\begin_inset Formula $x$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $\therefore f(x)$
+\end_inset
+
+is monotonic, and thus has an inverse function
+\end_layout
+
+\begin_layout Subsection*
+Problem 48:
+\end_layout
+
+\begin_layout Standard
+Determine whether the function is monotonic: 
+\begin_inset Formula $f(x)=|x+2|$
+\end_inset
+
+, [-2,
+\begin_inset Formula $\infty$
+\end_inset
+
+]
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $f'(x)=1\geq0$
+\end_inset
+
+ [-2,
+\begin_inset Formula $\infty$
+\end_inset
+
+]
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $\therefore f(x)$
+\end_inset
+
+is monotonic, and thus has an inverse function
+\end_layout
+
+\begin_layout Subsection*
+Problem 74:
+\end_layout
+
+\begin_layout Standard
+Find 
+\begin_inset Formula $(f^{-1})^{\prime}(a)$
+\end_inset
+
+, if 
+\begin_inset Formula $f(x)=\frac{1}{27}(x^{5}+2x^{3})$
+\end_inset
+
+ and 
+\begin_inset Formula $a=-11$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $f^{\prime}(x)=\frac{1}{27}(5x^{4}+6x^{2})>0$
+\end_inset
+
+, 
+\begin_inset Formula $\therefore(f^{-1})$
+\end_inset
+
+exists
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $-11=\frac{1}{27}(x^{5}+2x^{3})$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $x=17$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $\therefore f(x)=-11$
+\end_inset
+
+ when 
+\begin_inset Formula $x=-3$
+\end_inset
+
+
+ 
+\end_layout
+
+\begin_layout Standard
+Theorem 5.9 states that 
+\begin_inset Formula $(f^{-1})^{\prime}(x)=\frac{1}{f^{\prime}(f^{-1}(x))}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $(f^{-1})^{\prime}(-3)=\frac{1}{f^{\prime}(-3)}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $(f^{-1})^{\prime}(-3)=\frac{1}{\frac{1}{27}(-3^{4}\times5+-3^{2}\times6)}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $(f^{-1})^{\prime}(-3)=17$
+\end_inset
+
+
+\end_layout
+
+\end_body
+\end_document
